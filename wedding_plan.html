@@ -2,164 +2,206 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 
 <style>
 :root{
-  --paper:#EFF1EA; --card:#F6F7F2; --ink:#20261F; --muted:#66705F;
-  --line:#D6DACC; --line-strong:#C3C9B6;
-  --pine:#2F5E4E; --pine-soft:#5A8676; --brass:#A9793F; --brass-soft:#C79A5E;
-  --good:#3B7A5A; --warn:#B26A2E;
-  --bar:#8FA894; --bar-dip:#C79A5E; --bar-track:#E3E6DA;
-  --shadow:0 1px 2px rgba(32,38,31,.05), 0 8px 24px rgba(32,38,31,.05);
+  --paper:#F6F1E6; --card:#FCFAF3; --ink:#33261A; --muted:#7A6A52;
+  --line:#E6DBC5; --line-strong:#D8C8A8;
+  --sogan:#5E4123; --gold:#A9822C; --gold-soft:#C39A3B; --green:#3E5A45;
+  --good:#3E6B49; --warn:#B0742A;
+  --bar:#BC9F6F; --bar-dip:#C39A3B;
+  --rec-bg:#4A3117; --rec-ink:#F4ECD9;
+  --shadow:0 1px 2px rgba(60,42,20,.06), 0 10px 26px rgba(60,42,20,.07);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#141814; --card:#1C221B; --ink:#E7EAE0; --muted:#9AA491;
-    --line:#2C3329; --line-strong:#3A4335;
-    --pine:#8FBAA6; --pine-soft:#6E9A87; --brass:#D0A968; --brass-soft:#B98F52;
-    --good:#8FBAA6; --warn:#D8A05E;
-    --bar:#5C7A66; --bar-dip:#B98F52; --bar-track:#242B22;
-    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.28);
+    --paper:#17120B; --card:#211A10; --ink:#EFE7D5; --muted:#A6957A;
+    --line:#332818; --line-strong:#463818;
+    --sogan:#C8A06A; --gold:#CBA85A; --gold-soft:#DDBE76; --green:#8FB394;
+    --good:#8FB394; --warn:#D8A860;
+    --bar:#7C5E36; --bar-dip:#B98F52;
+    --rec-bg:#241A0E; --rec-ink:#EFE7D5;
+    --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 32px rgba(0,0,0,.3);
   }
 }
 :root[data-theme="dark"]{
-  --paper:#141814; --card:#1C221B; --ink:#E7EAE0; --muted:#9AA491;
-  --line:#2C3329; --line-strong:#3A4335;
-  --pine:#8FBAA6; --pine-soft:#6E9A87; --brass:#D0A968; --brass-soft:#B98F52;
-  --good:#8FBAA6; --warn:#D8A05E;
-  --bar:#5C7A66; --bar-dip:#B98F52; --bar-track:#242B22;
-  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.28);
+  --paper:#17120B; --card:#211A10; --ink:#EFE7D5; --muted:#A6957A;
+  --line:#332818; --line-strong:#463818;
+  --sogan:#C8A06A; --gold:#CBA85A; --gold-soft:#DDBE76; --green:#8FB394;
+  --good:#8FB394; --warn:#D8A860;
+  --bar:#7C5E36; --bar-dip:#B98F52;
+  --rec-bg:#241A0E; --rec-ink:#EFE7D5;
+  --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 32px rgba(0,0,0,.3);
 }
 
 *{box-sizing:border-box}
 body{
   margin:0; background:var(--paper); color:var(--ink);
-  font-family:"Instrument Sans",system-ui,sans-serif;
-  font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:920px; margin:0 auto; padding:0 24px}
-h1,h2,h3{font-family:"Fraunces",Georgia,serif; font-weight:500; text-wrap:balance; line-height:1.1; margin:0}
-.serif{font-family:"Fraunces",Georgia,serif}
-.eyebrow{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--pine); font-weight:600}
+h1,h2,h3{font-family:"Cormorant Garamond","Cormorant",Georgia,serif; font-weight:600; text-wrap:balance; line-height:1.08; margin:0}
+.eyebrow{font-size:12.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); font-weight:600; font-family:"EB Garamond",serif}
 .muted{color:var(--muted)}
 .num{font-variant-numeric:tabular-nums}
-.rp{color:var(--muted); font-size:.72em; font-weight:500; letter-spacing:.02em}
-.jv{font-style:italic; color:var(--pine)}
+.rp{color:var(--muted); font-size:.72em; letter-spacing:.02em}
+.jv{font-style:italic; color:var(--sogan)}
 
-header.mast{border-bottom:1px solid var(--line); padding:64px 0 40px; position:relative}
-.mast .eyebrow{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
-.mast .dot{width:5px; height:5px; border-radius:50%; background:var(--brass); display:inline-block}
-.mast h1{font-size:clamp(38px,7vw,66px); margin:22px 0 0; letter-spacing:-.015em}
-.mast h1 em{font-style:italic; color:var(--pine)}
-.mast p.lead{font-size:19px; color:var(--muted); max-width:60ch; margin:20px 0 0}
-.rings{position:absolute; top:60px; right:0; opacity:.9}
-@media(max-width:640px){.rings{display:none}}
+.melati-sprite{position:absolute;width:0;height:0;overflow:hidden}
 
+/* ---- masthead ---- */
+header.mast{border-bottom:1px solid var(--line); padding:34px 0 40px; position:relative; text-align:center}
+.garland{width:100%; max-width:760px; margin:0 auto 20px; display:block; height:auto}
+@media (prefers-reduced-motion:no-preference){
+  .garland{animation:sway 7s ease-in-out infinite; transform-origin:top center}
+  @keyframes sway{0%,100%{transform:rotate(-.5deg)}50%{transform:rotate(.5deg)}}
+}
+.mast .eyebrow{display:inline-flex; gap:12px; align-items:center; flex-wrap:wrap; justify-content:center}
+.mast .dot{width:4px; height:4px; border-radius:50%; background:var(--gold); display:inline-block}
+.mast h1{font-size:clamp(44px,8vw,78px); margin:16px 0 0; letter-spacing:.005em; font-weight:500}
+.mast h1 em{font-style:italic; color:var(--sogan)}
+.mast p.lead{font-size:19.5px; color:var(--muted); max-width:62ch; margin:18px auto 0}
+.rings-motif{margin:22px auto 0; display:block}
+
+/* ---- sections ---- */
 section{padding:56px 0; border-bottom:1px solid var(--line)}
-.sec-head{display:flex; align-items:baseline; gap:16px; margin-bottom:28px}
-.sec-head .n{font-family:"Fraunces",serif; font-size:15px; color:var(--brass); font-variant-numeric:tabular-nums; padding-top:4px}
-.sec-head h2{font-size:clamp(26px,4vw,34px)}
-.sec-head .sub{margin-left:auto; color:var(--muted); font-size:14px; text-align:right; max-width:34ch}
+.sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:26px}
+.sec-head .mk{width:22px; height:22px; flex:none; align-self:center; opacity:.9}
+.sec-head .n{font-family:"Cormorant Garamond",serif; font-size:16px; color:var(--gold); font-variant-numeric:tabular-nums; font-weight:600}
+.sec-head h2{font-size:clamp(30px,4.6vw,40px); font-weight:500}
+.sec-head .sub{margin-left:auto; color:var(--muted); font-size:14.5px; text-align:right; max-width:34ch; font-style:italic}
 @media(max-width:640px){.sec-head{flex-wrap:wrap} .sec-head .sub{margin-left:0; text-align:left; flex-basis:100%}}
 
-.ledger{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:12px; overflow:hidden}
+.ledger{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line-strong); border-radius:10px; overflow:hidden}
 .ledger .cell{background:var(--card); padding:20px 18px}
-.ledger .k{font-size:12.5px; letter-spacing:.03em; color:var(--muted); text-transform:uppercase; font-weight:600}
-.ledger .v{font-family:"Fraunces",serif; font-size:32px; margin-top:10px; font-variant-numeric:tabular-nums; letter-spacing:-.01em}
-.ledger .v small{font-size:14px; color:var(--muted); font-family:"Instrument Sans",sans-serif; font-weight:500}
-.ledger .note{font-size:12.5px; color:var(--muted); margin-top:4px}
+.ledger .k{font-size:12px; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; font-weight:600}
+.ledger .v{font-family:"Cormorant Garamond",serif; font-size:40px; margin-top:6px; font-variant-numeric:tabular-nums; font-weight:600; line-height:1}
+.ledger .v small{font-size:15px; color:var(--muted); font-weight:500}
+.ledger .note{font-size:13px; color:var(--muted); margin-top:6px; font-style:italic}
 
-table{width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums}
+/* ---- tables ---- */
+table{width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:16.5px}
 .tbl-wrap{overflow-x:auto}
-th,td{text-align:right; padding:10px 14px; border-bottom:1px solid var(--line)}
+th,td{text-align:right; padding:9px 14px; border-bottom:1px solid var(--line)}
 th:first-child,td:first-child{text-align:left}
-thead th{font-size:12px; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); font-weight:600; border-bottom:1.5px solid var(--line-strong)}
+thead th{font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); font-weight:600; border-bottom:1.5px solid var(--line-strong)}
 tbody td:first-child{font-weight:500}
-tbody tr td .d{display:block; font-size:12.5px; color:var(--muted); font-weight:400; margin-top:1px}
-tr.grp td{background:color-mix(in srgb,var(--pine) 8%,transparent); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--pine); font-weight:600; padding:7px 14px}
-tr.total td, .total td{border-top:1.5px solid var(--line-strong); border-bottom:none; font-family:"Fraunces",serif; font-size:19px}
-.total td:first-child{font-family:"Instrument Sans",sans-serif; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); font-weight:600; padding-top:16px}
+tbody tr td .d{display:block; font-size:13px; color:var(--muted); font-weight:400; font-style:italic; margin-top:1px}
+tr.grp td{background:color-mix(in srgb,var(--gold) 12%,transparent); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--sogan); font-weight:600; padding:7px 14px}
+tr.total td, .total td{border-top:1.5px solid var(--gold); border-bottom:none; font-family:"Cormorant Garamond",serif; font-size:22px; font-weight:600}
+.total td:first-child{font-family:"EB Garamond",serif; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; padding-top:16px}
 .total td{padding-top:16px}
-.colA{color:var(--pine); font-weight:600}
-.colB{color:var(--brass); font-weight:600}
-.subtot td{color:var(--muted); font-size:14px}
-.subtot td:first-child{color:var(--muted)}
+.colA{color:var(--sogan); font-weight:600}
+.colB{color:var(--gold); font-weight:600}
+.subtot td{color:var(--muted); font-size:15px}
 
+/* option chips */
 .opts{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:22px}
 @media(max-width:560px){.opts{grid-template-columns:1fr}}
-.opt{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px}
-.opt .tag{font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:600}
-.opt.a{border-top:3px solid var(--pine)} .opt.a .tag{color:var(--pine)}
-.opt.b{border-top:3px solid var(--brass)} .opt.b .tag{color:var(--brass)}
-.opt .big{font-family:"Fraunces",serif; font-size:34px; font-variant-numeric:tabular-nums; margin:6px 0 2px}
-.opt .desc{font-size:13.5px; color:var(--muted)}
+.opt{background:var(--card); border:1px solid var(--line-strong); border-radius:10px; padding:18px 20px}
+.opt .tag{font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:600}
+.opt.a{border-top:3px solid var(--sogan)} .opt.a .tag{color:var(--sogan)}
+.opt.b{border-top:3px solid var(--gold)} .opt.b .tag{color:var(--gold)}
+.opt .big{font-family:"Cormorant Garamond",serif; font-size:42px; font-variant-numeric:tabular-nums; margin:4px 0 2px; font-weight:600}
+.opt .desc{font-size:14.5px; color:var(--muted)}
 
+/* engagement breakdown */
 .engage-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:32px; align-items:start}
 @media(max-width:680px){.engage-grid{grid-template-columns:1fr; gap:8px}}
-.callout{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px; box-shadow:var(--shadow)}
-.callout .row{display:flex; justify-content:space-between; align-items:baseline; padding:9px 0; border-bottom:1px dashed var(--line)}
+.callout{background:var(--card); border:1px solid var(--line-strong); border-radius:10px; padding:22px; box-shadow:var(--shadow)}
+.callout .row{display:flex; justify-content:space-between; align-items:baseline; padding:8px 0; border-bottom:1px dotted var(--line-strong)}
 .callout .row:last-child{border-bottom:none}
-.callout .row .lab{font-size:15px}
-.callout .row .amt{font-family:"Fraunces",serif; font-variant-numeric:tabular-nums; font-size:17px}
-.callout .row.grand{margin-top:6px; padding-top:14px; border-top:1.5px solid var(--line-strong); border-bottom:none}
+.callout .row .lab{font-size:16px}
+.callout .row .amt{font-family:"Cormorant Garamond",serif; font-variant-numeric:tabular-nums; font-size:19px; font-weight:600}
+.callout .row.grand{margin-top:4px; padding-top:12px; border-top:1.5px solid var(--gold); border-bottom:none}
 .callout .row.grand .lab{font-weight:600}
-.callout .row.grand .amt{font-size:22px; color:var(--pine)}
+.callout .row.grand .amt{font-size:24px; color:var(--sogan)}
 
-.seq-day{font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--brass); font-weight:600; margin:6px 0 4px}
-.seq{list-style:none; margin:0 0 8px; padding:0 0 0 26px; position:relative}
-.seq::before{content:""; position:absolute; left:6px; top:8px; bottom:12px; width:1.5px; background:var(--line-strong)}
-.seq li{position:relative; padding:10px 0 14px}
-.seq li::before{content:""; position:absolute; left:-25px; top:15px; width:11px; height:11px; border-radius:50%; background:var(--paper); border:2px solid var(--pine)}
-.seq li.rite::before{border-color:var(--brass)}
-.seq h3{font-size:20px}
-.seq h3 .en{font-family:"Instrument Sans",sans-serif; font-size:13px; font-weight:500; color:var(--muted); font-style:normal; letter-spacing:.02em}
-.seq p{margin:3px 0 0; font-size:15px; color:var(--muted); max-width:64ch}
-.note-card{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--brass); border-radius:10px; padding:14px 18px; margin-top:20px; font-size:14.5px; color:var(--muted)}
+/* sequence */
+.seq-day{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:600; margin:6px 0 6px}
+.seq{list-style:none; margin:0 0 8px; padding:0 0 0 30px; position:relative}
+.seq::before{content:""; position:absolute; left:8px; top:10px; bottom:14px; width:1.5px; background:var(--line-strong)}
+.seq li{position:relative; padding:8px 0 14px}
+.seq li .fl{position:absolute; left:-30px; top:8px; width:18px; height:18px}
+.seq h3{font-size:25px; font-weight:600}
+.seq h3 .en{font-family:"EB Garamond",serif; font-size:14px; font-weight:400; color:var(--muted); font-style:italic; letter-spacing:.01em}
+.seq p{margin:2px 0 0; font-size:16.5px; color:var(--muted); max-width:66ch}
+.note-card{background:var(--card); border:1px solid var(--line-strong); border-left:3px solid var(--gold); border-radius:8px; padding:14px 18px; margin-top:20px; font-size:15.5px; color:var(--muted)}
 .note-card b{color:var(--ink)}
 .note-card + .note-card{margin-top:12px}
 
+/* chart */
 .chart{position:relative; margin-top:10px; padding:28px 0 0}
 .plot{position:relative; height:250px; display:flex; align-items:flex-end; gap:2px; border-bottom:1.5px solid var(--line-strong)}
 .bar{flex:1; background:var(--bar); border-radius:3px 3px 0 0; min-width:0; position:relative; transition:height .8s cubic-bezier(.2,.7,.2,1)}
 .bar.dip{background:var(--bar-dip)}
-.refline{position:absolute; left:0; right:0; border-top:1.5px dashed var(--pine); pointer-events:none}
-.refline.b{border-top-color:var(--brass)}
+.refline{position:absolute; left:0; right:0; border-top:1.5px dashed var(--sogan); pointer-events:none}
+.refline.b{border-top-color:var(--gold)}
 .refline .rl{position:absolute; right:0; top:-9px; background:var(--paper); padding:0 6px; font-size:11.5px; font-weight:600; letter-spacing:.03em}
-.refline .rl.pine{color:var(--pine)} .refline .rl.brass{color:var(--brass)}
+.refline .rl.sogan{color:var(--sogan)} .refline .rl.gold{color:var(--gold)}
 .xaxis{display:flex; gap:2px; margin-top:8px}
 .xaxis span{flex:1; text-align:center; font-size:10px; color:var(--muted); font-variant-numeric:tabular-nums; overflow:hidden; white-space:nowrap}
-.chart-cap{margin-top:20px; font-size:14px; color:var(--muted); max-width:64ch}
-.legend{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; font-size:12.5px; color:var(--muted)}
+.chart-cap{margin-top:20px; font-size:15px; color:var(--muted); max-width:66ch}
+.legend{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; font-size:13px; color:var(--muted)}
 .legend b{display:inline-block; width:11px; height:11px; border-radius:3px; vertical-align:-1px; margin-right:6px}
 
+/* scenarios */
 .scenarios{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
 @media(max-width:760px){.scenarios{grid-template-columns:1fr}}
-.scn{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:2px}
-.scn .when{font-family:"Fraunces",serif; font-size:23px}
-.scn .lbl{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--brass); font-weight:600; margin-bottom:8px}
-.scn .funds{font-variant-numeric:tabular-nums; margin-top:10px; font-size:15px}
-.scn .funds b{font-family:"Fraunces",serif; font-weight:500}
-.pill{display:inline-flex; align-items:center; gap:6px; align-self:flex-start; margin-top:14px; font-size:12.5px; font-weight:600; padding:4px 11px; border-radius:999px}
-.pill.ok{background:color-mix(in srgb,var(--good) 16%,transparent); color:var(--good)}
-.pill.part{background:color-mix(in srgb,var(--warn) 16%,transparent); color:var(--warn)}
+.scn{background:var(--card); border:1px solid var(--line-strong); border-radius:12px; padding:22px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:2px}
+.scn .when{font-family:"Cormorant Garamond",serif; font-size:28px; font-weight:600}
+.scn .lbl{font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:8px}
+.scn .funds{font-variant-numeric:tabular-nums; margin-top:10px; font-size:16px}
+.scn .funds b{font-family:"Cormorant Garamond",serif; font-weight:600; font-size:19px}
+.pill{display:inline-flex; align-items:center; gap:6px; align-self:flex-start; margin-top:14px; font-size:13px; font-weight:600; padding:4px 12px; border-radius:999px}
+.pill.ok{background:color-mix(in srgb,var(--good) 18%,transparent); color:var(--good)}
+.pill.part{background:color-mix(in srgb,var(--warn) 18%,transparent); color:var(--warn)}
 .pill .d{width:6px;height:6px;border-radius:50%;background:currentColor}
 
-.rec{background:var(--pine); color:#F3F5EE; border-radius:16px; padding:38px 34px; box-shadow:var(--shadow)}
-:root[data-theme="dark"] .rec, :root:not([data-theme="light"]) .rec{color:#0F130F}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .rec{color:#F3F5EE}}
-.rec .eyebrow{color:var(--brass-soft)}
-.rec h2{color:inherit; font-size:clamp(24px,3.4vw,32px); margin:14px 0 12px}
-.rec p{margin:0; max-width:62ch; opacity:.92}
+/* recommendation */
+.divider-fl{display:flex; align-items:center; justify-content:center; gap:14px; margin:8px 0 30px}
+.divider-fl .r{height:1px; width:90px; background:linear-gradient(to var(--dir,right),transparent,var(--gold))}
+.divider-fl .r.l{--dir:left}
+.divider-fl svg{width:26px;height:26px}
+.rec{background:var(--rec-bg); color:var(--rec-ink); border-radius:14px; padding:40px 36px; box-shadow:var(--shadow); position:relative; overflow:hidden}
+.rec .eyebrow{color:var(--gold-soft)}
+.rec h2{color:inherit; font-size:clamp(30px,3.8vw,40px); margin:12px 0 12px; font-weight:500}
+.rec p{margin:0; max-width:64ch; opacity:.94}
 .rec .grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:26px}
 @media(max-width:560px){.rec .grid{grid-template-columns:1fr}}
-.rec .grid h3{color:inherit; font-size:17px; margin-bottom:4px}
-.rec .grid p{font-size:14.5px}
+.rec .grid h3{color:inherit; font-size:20px; margin-bottom:2px; font-weight:600}
+.rec .grid p{font-size:15.5px}
+.rec .cornerfl{position:absolute; right:-14px; top:-14px; width:120px; height:120px; opacity:.16}
 
-footer{padding:40px 0 70px; color:var(--muted); font-size:13px}
+footer{padding:40px 0 70px; color:var(--muted); font-size:14px}
 footer .assume{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px 28px; margin-top:14px}
 footer .assume div{border-top:1px solid var(--line); padding-top:8px}
 footer b{color:var(--ink); font-weight:600}
+
+/* ---- mood / inspiration ---- */
+.mood .lead2{font-size:18px; color:var(--muted); max-width:64ch; margin:-6px 0 26px; font-style:italic}
+.palette{display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:30px}
+@media(max-width:620px){.palette{grid-template-columns:repeat(2,1fr)}}
+.sw{display:flex; flex-direction:column; gap:7px}
+.sw .chip{height:60px; border-radius:8px; border:1px solid rgba(60,42,20,.18); box-shadow:var(--shadow)}
+.sw .nm{font-size:13px; font-weight:600; color:var(--ink)}
+.sw .ro{font-size:12px; color:var(--muted); font-style:italic; line-height:1.35}
+.mtl{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:30px}
+@media(max-width:680px){.mtl{grid-template-columns:repeat(2,1fr)}}
+.tile{border:1px solid var(--line-strong); border-radius:10px; overflow:hidden; background:var(--card)}
+.tile .art{height:92px; display:block; width:100%}
+.tile .cap{padding:10px 13px; font-size:13.5px}
+.tile .cap b{display:block; color:var(--ink); font-weight:600}
+.tile .cap span{color:var(--muted); font-style:italic; font-size:12.5px}
+.scenes{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+@media(max-width:640px){.scenes{grid-template-columns:1fr}}
+.scene{border:1px solid var(--line-strong); border-radius:12px; overflow:hidden; background:var(--card); box-shadow:var(--shadow)}
+.scene .art{width:100%; height:200px; display:block}
+.scene .cap{padding:14px 16px}
+.scene .cap b{font-family:"Cormorant Garamond",serif; font-size:22px; color:var(--ink); display:block; font-weight:600}
+.scene .cap span{color:var(--muted); font-style:italic; font-size:14px}
 
 .reveal{opacity:0; transform:translateY(14px)}
 .reveal.in{opacity:1; transform:none; transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -169,51 +211,216 @@ footer b{color:var(--ink); font-weight:600}
 }
 </style>
 
+<!-- melati (jasmine) + leaf sprite -->
+<svg class="melati-sprite" aria-hidden="true">
+  <symbol id="melati" viewBox="0 0 40 40">
+    <g fill="#FFFFFF" stroke="#E2D6BE" stroke-width="0.9">
+      <ellipse cx="20" cy="10.6" rx="5.4" ry="8.6"/>
+      <ellipse cx="20" cy="10.6" rx="5.4" ry="8.6" transform="rotate(72 20 20)"/>
+      <ellipse cx="20" cy="10.6" rx="5.4" ry="8.6" transform="rotate(144 20 20)"/>
+      <ellipse cx="20" cy="10.6" rx="5.4" ry="8.6" transform="rotate(216 20 20)"/>
+      <ellipse cx="20" cy="10.6" rx="5.4" ry="8.6" transform="rotate(288 20 20)"/>
+    </g>
+    <circle cx="20" cy="20" r="3" fill="#C39A3B"/>
+  </symbol>
+  <symbol id="bud" viewBox="0 0 20 24">
+    <path d="M10 2 C4 6 4 13 10 15 C16 13 16 6 10 2Z" fill="#FFFFFF" stroke="#E2D6BE" stroke-width="0.8"/>
+    <path d="M10 14 L10 23" stroke="#6E8A66" stroke-width="1.2"/>
+  </symbol>
+  <symbol id="leaf" viewBox="0 0 24 24">
+    <path d="M12 2 C4 8 4 16 12 22 C20 16 20 8 12 2Z" fill="#6E8A66"/>
+    <path d="M12 3 L12 21" stroke="#566E4F" stroke-width="0.8"/>
+  </symbol>
+</svg>
+
 <div class="wrap">
 
 <header class="mast">
+  <svg class="garland" viewBox="0 0 900 130" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+    <path d="M30 22 Q450 118 870 22" fill="none" stroke="#C39A3B" stroke-width="1.3" opacity=".7"/>
+    <use href="#leaf" x="92" y="40" width="15" height="15"/>
+    <use href="#leaf" x="770" y="40" width="15" height="15"/>
+    <use href="#leaf" x="300" y="86" width="13" height="13"/>
+    <use href="#leaf" x="590" y="86" width="13" height="13"/>
+    <!-- hanging strands -->
+    <path d="M300 66 L300 96" stroke="#C39A3B" stroke-width="1" opacity=".6"/>
+    <path d="M600 66 L600 96" stroke="#C39A3B" stroke-width="1" opacity=".6"/>
+    <use href="#bud" x="294" y="98" width="12" height="15"/>
+    <use href="#bud" x="594" y="98" width="12" height="15"/>
+    <!-- blossoms along the swag -->
+    <use href="#melati" x="34"  y="8"  width="30" height="30"/>
+    <use href="#melati" x="128" y="28" width="26" height="26"/>
+    <use href="#melati" x="222" y="46" width="28" height="28"/>
+    <use href="#melati" x="330" y="60" width="26" height="26"/>
+    <use href="#melati" x="436" y="66" width="30" height="30"/>
+    <use href="#melati" x="548" y="60" width="26" height="26"/>
+    <use href="#melati" x="650" y="46" width="28" height="28"/>
+    <use href="#melati" x="744" y="28" width="26" height="26"/>
+    <use href="#melati" x="836" y="8"  width="30" height="30"/>
+  </svg>
   <div class="eyebrow">
     <span>Engagement · Nov 2026</span><span class="dot"></span>
     <span>Wedding · 2027</span><span class="dot"></span>
-    <span>Adat: siraman kept</span>
+    <span>Melati &amp; Sogan</span>
   </div>
   <h1>A subtle wedding,<br><em>counted carefully.</em></h1>
-  <p class="lead">A Javanese bride, a Buginese groom, one shared account. The adat is kept light — a <span class="jv">siraman</span> before the day, then the akad and a subtle reception at Rooang Dharmawangsa with a proper flow: MC, live music, and a night in the suite. Here is the whole thing, and when it becomes affordable.</p>
-  <svg class="rings" width="120" height="90" viewBox="0 0 120 90" fill="none" aria-hidden="true">
-    <circle cx="46" cy="52" r="26" stroke="var(--pine)" stroke-width="2.5"/>
-    <circle cx="76" cy="52" r="26" stroke="var(--brass)" stroke-width="2.5"/>
-    <path d="M40 26 l6 -9 l6 9 z" fill="var(--pine)"/>
-    <path d="M70 26 l6 -9 l6 9 z" fill="var(--brass)"/>
+  <p class="lead">A Javanese bride, a Buginese groom, one shared account. White melati, sogan and gold — the adat kept light: a <span class="jv">siraman</span> before the day, then the akad and a subtle reception at Rooang Dharmawangsa with a proper flow. Here is the whole thing, and when it becomes affordable.</p>
+  <svg class="rings-motif" width="130" height="66" viewBox="0 0 130 66" fill="none" aria-hidden="true">
+    <circle cx="52" cy="38" r="22" stroke="#A9822C" stroke-width="2.5"/>
+    <circle cx="78" cy="38" r="22" stroke="#A9822C" stroke-width="2.5"/>
+    <use href="#melati" x="53" y="2" width="24" height="24"/>
   </svg>
 </header>
+
+<!-- MOOD / INSPIRATION -->
+<section class="reveal mood">
+  <div class="sec-head">
+    <svg class="mk"><use href="#melati" width="22" height="22"/></svg>
+    <span class="n" style="font-style:italic; text-transform:none; letter-spacing:0">Inspo</span>
+    <h2>The look &amp; feel</h2>
+    <span class="sub">White melati, sogan &amp; gold — a Javanese home carried into the reception</span>
+  </div>
+  <p class="lead2">The feeling we're planning toward: strings of white jasmine over warm teak, the deep brown-and-gold of sogan batik, brass and candlelight — the calm of a joglo home, dressed up for one evening at Rooang.</p>
+
+  <div class="palette">
+    <div class="sw"><div class="chip" style="background:#FFFFFF"></div><div class="nm">Melati white</div><div class="ro">Jasmine — the flower</div></div>
+    <div class="sw"><div class="chip" style="background:#F2E9D5"></div><div class="nm">Ivory</div><div class="ro">Linen &amp; light</div></div>
+    <div class="sw"><div class="chip" style="background:#5E4123"></div><div class="nm">Sogan</div><div class="ro">Batik brown</div></div>
+    <div class="sw"><div class="chip" style="background:#B8912E"></div><div class="nm">Antique gold</div><div class="ro">Prada &amp; brass</div></div>
+    <div class="sw"><div class="chip" style="background:#4E6B4F"></div><div class="nm">Daun</div><div class="ro">Green accent</div></div>
+  </div>
+
+  <div class="mtl">
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A5628"/><stop offset=".55" stop-color="#5E4123"/><stop offset="1" stop-color="#43301A"/></linearGradient></defs>
+        <rect width="120" height="92" fill="url(#wood)"/>
+        <g stroke="#3B2814" stroke-width="1" opacity=".4" fill="none"><path d="M0 22 Q60 28 120 20"/><path d="M0 46 Q60 52 120 44"/><path d="M0 70 Q60 76 120 68"/></g>
+        <g transform="translate(60,46)" fill="none" stroke="#C39A3B" stroke-width="1.2" opacity=".85"><circle r="13"/><circle r="6"/><path d="M0 -13 V-19 M0 13 V19 M-13 0 H-19 M13 0 H19"/></g>
+      </svg>
+      <div class="cap"><b>Teak &amp; carved wood</b><span>Warm, grounding</span></div>
+    </div>
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><g id="tr" fill="#D8B25E"><circle r="1.7"/><path d="M0 -6 L1.2 -1.2 L6 0 L1.2 1.2 L0 6 L-1.2 1.2 L-6 0 L-1.2 -1.2Z"/></g>
+        <pattern id="trp" width="28" height="28" patternUnits="userSpaceOnUse"><use href="#tr" x="7" y="7"/><use href="#tr" x="21" y="21"/></pattern></defs>
+        <rect width="120" height="92" fill="#5E4123"/><rect width="120" height="92" fill="url(#trp)" opacity=".9"/>
+      </svg>
+      <div class="cap"><b>Batik truntum</b><span>Sogan — the love motif</span></div>
+    </div>
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><pattern id="weave" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#CBAB6D"/><rect width="9" height="9" fill="#B4934F"/><rect x="9" y="9" width="9" height="9" fill="#B4934F"/></pattern></defs>
+        <rect width="120" height="92" fill="url(#weave)"/>
+        <g stroke="#8E7038" stroke-width=".7" opacity=".4"><path d="M0 9 H120 M0 27 H120 M0 45 H120 M0 63 H120 M0 81 H120"/></g>
+      </svg>
+      <div class="cap"><b>Woven bamboo</b><span>Gedhek texture</span></div>
+    </div>
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="120" height="92" fill="#F0E9D8"/>
+        <path d="M60 -4 V96" stroke="#C39A3B" stroke-width="1" opacity=".5"/>
+        <use href="#melati" x="47" y="4" width="26" height="26"/>
+        <use href="#bud" x="55" y="30" width="10" height="13"/>
+        <use href="#melati" x="49" y="42" width="22" height="22"/>
+        <use href="#bud" x="55" y="64" width="10" height="13"/>
+        <use href="#melati" x="47" y="72" width="26" height="26"/>
+      </svg>
+      <div class="cap"><b>Roncean melati</b><span>Jasmine strands</span></div>
+    </div>
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><radialGradient id="glow" cx=".5" cy=".46" r=".62"><stop offset="0" stop-color="#EBCB7B"/><stop offset=".5" stop-color="#8A6A2E"/><stop offset="1" stop-color="#38290F"/></radialGradient></defs>
+        <rect width="120" height="92" fill="url(#glow)"/>
+        <rect x="55" y="50" width="10" height="34" rx="1.5" fill="#EDE4CC"/>
+        <ellipse cx="60" cy="40" rx="4" ry="8" fill="#FBEFC0" opacity=".7"/>
+        <path d="M60 32 C55 40 57 50 60 50 C63 50 65 40 60 32Z" fill="#F6D98A"/>
+      </svg>
+      <div class="cap"><b>Brass &amp; candlelight</b><span>Evening warmth</span></div>
+    </div>
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="120" height="92" fill="#E8EFE1"/>
+        <use href="#leaf" x="14" y="18" width="30" height="30"/>
+        <use href="#leaf" x="52" y="40" width="34" height="34"/>
+        <use href="#leaf" x="86" y="14" width="26" height="26"/>
+        <use href="#leaf" x="30" y="56" width="24" height="24"/>
+      </svg>
+      <div class="cap"><b>Palem &amp; daun</b><span>Tropical greenery</span></div>
+    </div>
+  </div>
+
+  <div class="scenes">
+    <div class="scene">
+      <svg class="art" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4E8CF"/><stop offset="1" stop-color="#E5D2AC"/></linearGradient></defs>
+        <rect width="300" height="200" fill="url(#skyA)"/>
+        <rect y="166" width="300" height="34" fill="#7A5A32"/>
+        <rect x="147" y="12" width="6" height="14" fill="#C39A3B"/>
+        <g fill="#5E4123"><path d="M150 24 L216 80 L84 80 Z"/><path d="M94 80 L206 80 L228 118 L72 118 Z"/></g>
+        <g fill="#4A3319" opacity=".55"><path d="M150 24 L216 80 L150 80 Z"/></g>
+        <rect x="78" y="118" width="144" height="7" fill="#4A3319"/>
+        <g fill="#6E4E2C"><rect x="92" y="125" width="10" height="41"/><rect x="128" y="125" width="10" height="41"/><rect x="162" y="125" width="10" height="41"/><rect x="198" y="125" width="10" height="41"/></g>
+        <line x1="150" y1="125" x2="150" y2="138" stroke="#C39A3B" stroke-width="1.5"/>
+        <circle cx="150" cy="143" r="6" fill="#EBCB7B"/><circle cx="150" cy="143" r="10" fill="#EBCB7B" opacity=".28"/>
+        <use href="#melati" x="196" y="150" width="18" height="18"/>
+        <use href="#melati" x="118" y="152" width="16" height="16"/>
+      </svg>
+      <div class="cap"><b>A Javanese home</b><span>Joglo roof, pendopo, a hanging lamp — the siraman &amp; home akad</span></div>
+    </div>
+    <div class="scene">
+      <svg class="art" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><linearGradient id="hallB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7F0DE"/><stop offset="1" stop-color="#ECE1C6"/></linearGradient></defs>
+        <rect width="300" height="200" fill="url(#hallB)"/>
+        <g fill="#B7CAA6" opacity=".55"><path d="M44 168 V96 Q44 66 74 66 Q104 66 104 96 V168Z"/><path d="M122 168 V96 Q122 66 152 66 Q182 66 182 96 V168Z"/><path d="M200 168 V96 Q200 66 230 66 Q260 66 260 96 V168Z"/></g>
+        <rect y="168" width="300" height="32" fill="#D9C8A3"/>
+        <g fill="none" stroke="#C6B084" stroke-width="3"><path d="M44 168 V96 Q44 66 74 66 Q104 66 104 96 V168"/><path d="M122 168 V96 Q122 66 152 66 Q182 66 182 96 V168"/><path d="M200 168 V96 Q200 66 230 66 Q260 66 260 96 V168"/></g>
+        <path d="M44 92 Q74 112 104 92" fill="none" stroke="#C39A3B" stroke-width="1" opacity=".7"/>
+        <path d="M122 92 Q152 112 182 92" fill="none" stroke="#C39A3B" stroke-width="1" opacity=".7"/>
+        <path d="M200 92 Q230 112 260 92" fill="none" stroke="#C39A3B" stroke-width="1" opacity=".7"/>
+        <use href="#melati" x="66" y="99" width="16" height="16"/><use href="#melati" x="144" y="99" width="16" height="16"/><use href="#melati" x="222" y="99" width="16" height="16"/>
+        <use href="#bud" x="52" y="94" width="9" height="12"/><use href="#bud" x="96" y="94" width="9" height="12"/>
+        <g fill="#EBCB7B"><circle cx="90" cy="176" r="3"/><circle cx="150" cy="180" r="3"/><circle cx="210" cy="176" r="3"/></g>
+        <g fill="#EBCB7B" opacity=".3"><circle cx="90" cy="176" r="7"/><circle cx="150" cy="180" r="7"/><circle cx="210" cy="176" r="7"/></g>
+      </svg>
+      <div class="cap"><b>Reception mood — Rooang</b><span>Garden arches, melati swags, candlelit aisle — an impression, not the venue</span></div>
+    </div>
+  </div>
+
+  <div class="note-card">
+    <b>These are illustrated moods, not photographs.</b> I can't pull copyrighted photos of the actual venue or a real home into the page. Send me reference photos of Rooang Dharmawangsa and the family home (or links), and I'll place real images in this section.
+  </div>
+</section>
 
 <!-- 1 · AT A GLANCE -->
 <section class="reveal">
   <div class="sec-head">
+    <svg class="mk"><use href="#melati" width="22" height="22"/></svg>
     <span class="n">01</span>
     <h2>The plan at a glance</h2>
-    <span class="sub">Everything in <b>Rp&nbsp;million</b>. You save Rp&nbsp;5&nbsp;mio a month — her 2, his 3.</span>
+    <span class="sub">All in Rp&nbsp;million. You save Rp&nbsp;5&nbsp;mio a month — her 2, his 3.</span>
   </div>
   <div class="ledger">
-    <div class="cell"><div class="k">In the account now</div><div class="v num">50<small> mio</small></div><div class="note">Blugether balance, Sep 2026</div></div>
+    <div class="cell"><div class="k">In the account now</div><div class="v num">50<small> mio</small></div><div class="note">Blugether, Sep 2026</div></div>
     <div class="cell"><div class="k">Saved / month</div><div class="v num">5<small> mio</small></div><div class="note">Her 2 · His 3</div></div>
     <div class="cell"><div class="k">Engagement phase</div><div class="v num">17.8<small> mio</small></div><div class="note">Event 5.0 + ring 12.8</div></div>
-    <div class="cell"><div class="k">Wedding · Option A</div><div class="v num" style="color:var(--pine)">90.4<small> mio</small></div><div class="note">Intimate ~50, full day</div></div>
-    <div class="cell"><div class="k">Wedding · Option B</div><div class="v num" style="color:var(--brass)">168.4<small> mio</small></div><div class="note">Grander, ~100</div></div>
+    <div class="cell"><div class="k">Wedding · Option A</div><div class="v num" style="color:var(--sogan)">90.4<small> mio</small></div><div class="note">Intimate ~50, full day</div></div>
+    <div class="cell"><div class="k">Wedding · Option B</div><div class="v num" style="color:var(--gold)">168.4<small> mio</small></div><div class="note">Grander, ~100</div></div>
   </div>
 </section>
 
 <!-- 2 · ENGAGEMENT -->
 <section class="reveal">
   <div class="sec-head">
+    <svg class="mk"><use href="#melati" width="22" height="22"/></svg>
     <span class="n">02</span>
     <h2>The engagement</h2>
-    <span class="sub">Lamaran · November 2026 · at her home · ~20 people</span>
+    <span class="sub">Lamaran · Nov 2026 · at her home · ~20 people</span>
   </div>
   <div class="engage-grid">
     <div>
       <p style="margin-top:0">A small <span class="jv">lamaran</span> at home comes in comfortably at Rp&nbsp;5&nbsp;mio, as long as the meal stays home-cooked and the spend goes on what people see: a tent, some decoration, and the <span class="jv">seserahan</span> exchange.</p>
-      <p class="muted" style="font-size:15px">The engagement ring for her (Rp&nbsp;12.8&nbsp;mio) sits outside this — the same money, tracked on its own. Together they make the <b style="color:var(--ink)">Rp&nbsp;17.8&nbsp;mio</b> engagement phase in November.</p>
+      <p class="muted" style="font-size:16px">The engagement ring for her (Rp&nbsp;12.8&nbsp;mio) sits outside this — the same money, tracked on its own. Together they make the <b style="color:var(--ink)">Rp&nbsp;17.8&nbsp;mio</b> engagement phase in November.</p>
     </div>
     <div class="callout">
       <div class="row"><span class="lab">Tenda + chairs</span><span class="amt num">1.5</span></div>
@@ -230,6 +437,7 @@ footer b{color:var(--ink); font-weight:600}
 <!-- 3 · THE SEQUENCE -->
 <section class="reveal">
   <div class="sec-head">
+    <svg class="mk"><use href="#melati" width="22" height="22"/></svg>
     <span class="n">03</span>
     <h2>The day, in order</h2>
     <span class="sub">One adat ritual kept — the siraman — then a full wedding day</span>
@@ -237,7 +445,8 @@ footer b{color:var(--ink); font-weight:600}
 
   <div class="seq-day">The day before</div>
   <ul class="seq">
-    <li class="rite">
+    <li>
+      <svg class="fl"><use href="#melati" width="18" height="18"/></svg>
       <h3>Siraman <span class="en">— the bathing</span></h3>
       <p>A purification at home with flower water drawn from seven sources, poured by the elders, to simple gendhing. It closes with <span class="jv">sungkeman</span> to the parents and the symbolic <span class="jv">dodol dawet</span>. This is the one pre-wedding adat we're keeping.</p>
     </li>
@@ -246,16 +455,19 @@ footer b{color:var(--ink); font-weight:600}
   <div class="seq-day">The wedding day</div>
   <ul class="seq">
     <li>
+      <svg class="fl"><use href="#melati" width="18" height="18"/></svg>
       <h3>Ijab · Akad Nikah <span class="en">— the marriage contract</span></h3>
       <p>The Islamic vows. Held at Rooang for Option B, or at home first then Rooang for Option A. A day-of coordinator and MC keep the rundown on time.</p>
     </li>
-    <li class="rite">
+    <li>
+      <svg class="fl"><use href="#melati" width="18" height="18"/></svg>
       <h3>Panggih <span class="en">— the meeting of the two</span></h3>
       <p>Bride and groom meet as married: <span class="jv">balangan suruh</span>, the egg, <span class="jv">sindur</span>, <span class="jv">kacar-kucur</span>, feeding one another, and a final <span class="jv">sungkeman</span>.</p>
     </li>
     <li>
+      <svg class="fl"><use href="#melati" width="18" height="18"/></svg>
       <h3>Resepsi <span class="en">— the reception</span></h3>
-      <p>At Rooang Dharmawangsa: subtle, elegant decor, seated catering, live music, and an MC to carry the evening — then a night in the bridal suite.</p>
+      <p>At Rooang Dharmawangsa: subtle, elegant decor dressed in white melati, seated catering, live music, and an MC to carry the evening — then a night in the bridal suite.</p>
     </li>
   </ul>
 
@@ -270,6 +482,7 @@ footer b{color:var(--ink); font-weight:600}
 <!-- 4 · WEDDING A vs B -->
 <section class="reveal">
   <div class="sec-head">
+    <svg class="mk"><use href="#melati" width="22" height="22"/></svg>
     <span class="n">04</span>
     <h2>The wedding, two ways</h2>
     <span class="sub">Same day, same rituals. A is lean; B is grander.</span>
@@ -279,12 +492,12 @@ footer b{color:var(--ink); font-weight:600}
     <div class="opt a">
       <div class="tag">Option A · Intimate</div>
       <div class="big num">90.4 <span class="rp">Rp mio</span></div>
-      <div class="desc">~50 guests. <b>Akad at home</b>, reception at Rooang. Acoustic trio, subtle decor, rented busana — the full flow, leaner.</div>
+      <div class="desc">~50 guests. <b>Akad at home</b>, reception at Rooang. Acoustic trio, subtle melati decor, rented busana — the full flow, leaner.</div>
     </div>
     <div class="opt b">
       <div class="tag">Option B · Grander</div>
       <div class="big num">168.4 <span class="rp">Rp mio</span></div>
-      <div class="desc">~100 guests. <b>Full akad + reception</b> at Rooang. Live band, paes ageng, fuller decor, two-day full photo/video.</div>
+      <div class="desc">~100 guests. <b>Full akad + reception</b> at Rooang. Live band, paes ageng, fuller floral decor, two-day full photo/video.</div>
     </div>
   </div>
 
@@ -305,7 +518,7 @@ footer b{color:var(--ink); font-weight:600}
       <tr><td>MC / host<span class="d">Bilingual host across akad + reception</span></td><td class="colA num">2.5</td><td class="colB num">4.0</td></tr>
       <tr class="grp"><td colspan="3">Reception at Rooang</td></tr>
       <tr><td>Reception catering<span class="d">50 × 0.15 · 100 × 0.20 per guest</span></td><td class="colA num">7.5</td><td class="colB num">20.0</td></tr>
-      <tr><td>Reception decor &amp; floral — Rooang<span class="d">Subtle &amp; elegant: stage, entrance, aisle, table florals</span></td><td class="colA num">5.0</td><td class="colB num">12.0</td></tr>
+      <tr><td>Reception decor &amp; floral — Rooang<span class="d">Subtle &amp; elegant: white melati stage, entrance, aisle, table florals</span></td><td class="colA num">5.0</td><td class="colB num">12.0</td></tr>
       <tr><td>Entertainment — live music<span class="d">A: acoustic trio · B: full band</span></td><td class="colA num">3.5</td><td class="colB num">8.0</td></tr>
       <tr><td>Hotel room — bridal suite (1 night)<span class="d">Wedding-night room for the couple</span></td><td class="colA num">2.5</td><td class="colB num">5.0</td></tr>
       <tr><td>Wedding cake &amp; dessert</td><td class="colA num">1.0</td><td class="colB num">2.5</td></tr>
@@ -326,20 +539,21 @@ footer b{color:var(--ink); font-weight:600}
     </tbody>
   </table>
   </div>
-  <p class="muted" style="font-size:14.5px; margin-bottom:0">On your Rooang question: <b style="color:var(--ink)">akad at Rooang</b> is the fuller Option&nbsp;B. If the slot or rate is tight, <b style="color:var(--ink)">akad at home first, then reception at Rooang</b> is Option&nbsp;A — same flow, roughly Rp&nbsp;78&nbsp;mio lighter than B.</p>
+  <p class="muted" style="font-size:15.5px; margin-bottom:0">On your Rooang question: <b style="color:var(--ink)">akad at Rooang</b> is the fuller Option&nbsp;B. If the slot or rate is tight, <b style="color:var(--ink)">akad at home first, then reception at Rooang</b> is Option&nbsp;A — same flow, roughly Rp&nbsp;78&nbsp;mio lighter than B.</p>
 </section>
 
 <!-- 5 · RUNWAY -->
 <section class="reveal">
   <div class="sec-head">
+    <svg class="mk"><use href="#melati" width="22" height="22"/></svg>
     <span class="n">05</span>
     <h2>The savings runway</h2>
-    <span class="sub">Closing balance each month, after the engagement dips it in Nov 2026</span>
+    <span class="sub">Closing balance each month, after the Nov 2026 engagement dip</span>
   </div>
   <div class="chart">
     <div class="plot" id="plot">
-      <div class="refline b" style="bottom:96.2%"><span class="rl brass">Option B · 168.4</span></div>
-      <div class="refline"  style="bottom:51.7%"><span class="rl pine">Option A · 90.4</span></div>
+      <div class="refline b" style="bottom:96.2%"><span class="rl gold">Option B · 168.4</span></div>
+      <div class="refline"  style="bottom:51.7%"><span class="rl sogan">Option A · 90.4</span></div>
     </div>
     <div class="xaxis" id="xaxis"></div>
     <div class="legend">
@@ -353,6 +567,7 @@ footer b{color:var(--ink); font-weight:600}
 <!-- 6 · TIMELINE -->
 <section class="reveal">
   <div class="sec-head">
+    <svg class="mk"><use href="#melati" width="22" height="22"/></svg>
     <span class="n">06</span>
     <h2>Three ways the year could go</h2>
     <span class="sub">Same saving plan, different wedding dates</span>
@@ -384,10 +599,18 @@ footer b{color:var(--ink); font-weight:600}
 
 <!-- 7 · RECOMMENDATION -->
 <section class="reveal" style="border-bottom:none">
+  <div class="divider-fl" aria-hidden="true">
+    <span class="r l"></span>
+    <svg><use href="#leaf" width="16" height="16" x="5" y="5"/></svg>
+    <svg><use href="#melati" width="26" height="26"/></svg>
+    <svg><use href="#leaf" width="16" height="16" x="5" y="5"/></svg>
+    <span class="r"></span>
+  </div>
   <div class="rec">
+    <svg class="cornerfl" aria-hidden="true"><use href="#melati" width="120" height="120"/></svg>
     <div class="eyebrow">The honest read</div>
     <h2>Aim for Option A, autumn 2027.</h2>
-    <p>The siraman, the akad, a subtle reception at Rooang with real flow — coordinator, MC, live music, a night in the suite — still fits inside what you already save. You clear Option A around August 2027 and sit on a cushion by October–November. No stretching, no borrowing.</p>
+    <p>The siraman, the akad, a subtle reception at Rooang dressed in white melati — coordinator, MC, live music, a night in the suite — still fits inside what you already save. You clear Option A around August 2027 and sit on a cushion by October–November. No stretching, no borrowing.</p>
     <div class="grid">
       <div>
         <h3>If you want it sooner</h3>
