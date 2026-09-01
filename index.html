@@ -202,6 +202,16 @@ footer b{color:var(--ink); font-weight:600}
 .scene .cap{padding:14px 16px}
 .scene .cap b{font-family:"Cormorant Garamond",serif; font-size:22px; color:var(--ink); display:block; font-weight:600}
 .scene .cap span{color:var(--muted); font-style:italic; font-size:14px}
+.shots-lbl{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:600; margin:26px 0 12px}
+.shots{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+@media(max-width:760px){.shots{grid-template-columns:repeat(2,1fr)}}
+.shot{display:flex; flex-direction:column; gap:7px}
+.shot .frame{position:relative; aspect-ratio:3/4; border-radius:10px; overflow:hidden; border:1px solid var(--line-strong); background:var(--card)}
+.shot .ph{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:.5}
+.shot .ph svg{width:30px; height:30px}
+.shot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1}
+.shot figcaption{font-size:12.5px; color:var(--muted); line-height:1.3}
+.shot figcaption b{display:block; color:var(--ink); font-weight:600; font-size:13px}
 
 .reveal{opacity:0; transform:translateY(14px)}
 .reveal.in{opacity:1; transform:none; transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -408,8 +418,31 @@ footer b{color:var(--ink); font-weight:600}
     </div>
   </div>
 
+  <div class="shots-lbl">Photo inspiration — attire, florals &amp; details</div>
+  <div class="shots">
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#melati" width="30" height="30"/></svg></div><img src="images/inspo/kebaya.jpg" alt="Ivory lace kebaya"></div><figcaption><b>Ivory lace kebaya</b>Bride</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#melati" width="30" height="30"/></svg></div><img src="images/inspo/melati.jpg" alt="Roncean melati necklace"></div><figcaption><b>Roncean melati</b>Jasmine at the neckline</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#melati" width="30" height="30"/></svg></div><img src="images/inspo/paes.jpg" alt="Paes bridal makeup"></div><figcaption><b>Paes</b>Bridal makeup</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#peony" width="30" height="30"/></svg></div><img src="images/inspo/bouquet.jpg" alt="Calla and blush peony bouquet"></div><figcaption><b>Calla &amp; blush peony</b>Bouquet</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#leaf" width="26" height="26"/></svg></div><img src="images/inspo/groom-suit.jpg" alt="Groom light grey double-breasted suit"></div><figcaption><b>Light grey suit</b>Groom — engagement (double-breasted)</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#leaf" width="26" height="26"/></svg></div><img src="images/inspo/groom-beskap.jpg" alt="Groom beskap Javanese attire"></div><figcaption><b>Beskap</b>Groom — wedding day</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#melati" width="30" height="30"/></svg></div><img src="images/inspo/arch.jpg" alt="Garden floral arch"></div><figcaption><b>Floral arch</b>Melati &amp; greenery</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#peony" width="30" height="30"/></svg></div><img src="images/inspo/table.jpg" alt="Table setting and candlelight"></div><figcaption><b>Table &amp; candlelight</b>Reception détail</figcaption></figure>
+  </div>
+
+  <div class="shots-lbl">Rooang Dharmawangsa — the venue</div>
+  <div class="shots">
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#melati" width="30" height="30"/></svg></div><img src="images/rooang/hall.jpg" alt="Rooang Dharmawangsa reception hall"></div><figcaption><b>Reception hall</b>Rooang</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#leaf" width="26" height="26"/></svg></div><img src="images/rooang/garden.jpg" alt="Rooang Dharmawangsa garden and arches"></div><figcaption><b>Garden &amp; arches</b>Rooang</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#melati" width="30" height="30"/></svg></div><img src="images/rooang/entrance.jpg" alt="Rooang Dharmawangsa entrance and details"></div><figcaption><b>Entrance &amp; détails</b>Rooang</figcaption></figure>
+    <figure class="shot"><div class="frame"><div class="ph"><svg><use href="#peony" width="30" height="30"/></svg></div><img src="images/rooang/evening.jpg" alt="Rooang Dharmawangsa evening lighting"></div><figcaption><b>Evening &amp; lighting</b>Rooang</figcaption></figure>
+  </div>
+
   <div class="note-card">
-    <b>These are illustrated moods, not photographs.</b> I can't pull copyrighted photos of the actual venue or a real home into the page. Send me reference photos of Rooang Dharmawangsa and the family home (or links), and I'll place real images in this section.
+    <b>Attire.</b> Bride: an ivory lace kebaya with a roncean melati, paes on the wedding day. Groom: a <b>light grey double-breasted suit</b> for the engagement, and a Javanese <b>beskap</b> on the wedding day (loafers already bought).
+  </div>
+  <div class="note-card">
+    <b>The frames above are waiting for real photos.</b> I can't pull copyrighted images of the venue or your saved pins onto the page myself — so send me the actual photo files (yours, or Rooang's own with permission) and I'll drop each into its slot. Until then, each frame shows a placeholder.
   </div>
 </section>
 
@@ -680,4 +713,9 @@ data.forEach((d,i)=>{
 });
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+// photo slots: if a real image isn't present yet, drop it so the placeholder shows
+document.querySelectorAll(".shot img").forEach(img=>{
+  img.addEventListener("error",()=>img.remove());
+  if(img.complete && img.naturalWidth===0) img.remove();
+});
 </script>
