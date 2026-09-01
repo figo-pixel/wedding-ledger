@@ -6,32 +6,32 @@
 
 <style>
 :root{
-  --paper:#F6F1E6; --card:#FCFAF3; --ink:#33261A; --muted:#7A6A52;
-  --line:#E6DBC5; --line-strong:#D8C8A8;
-  --sogan:#5E4123; --gold:#A9822C; --gold-soft:#C39A3B; --green:#3E5A45;
-  --good:#3E6B49; --warn:#B0742A;
-  --bar:#BC9F6F; --bar-dip:#C39A3B;
-  --rec-bg:#4A3117; --rec-ink:#F4ECD9;
-  --shadow:0 1px 2px rgba(60,42,20,.06), 0 10px 26px rgba(60,42,20,.07);
+  --paper:#F7F3EA; --card:#FCFAF4; --ink:#3A352B; --muted:#847A66;
+  --line:#E7DFCD; --line-strong:#D6CBB2;
+  --sogan:#4F6340; --gold:#B29A5F; --gold-soft:#C6B07A; --green:#5E7150; --blush:#C68B80;
+  --good:#5B7A4E; --warn:#B0742A;
+  --bar:#AEB79A; --bar-dip:#C6AE71;
+  --rec-bg:#3B4A31; --rec-ink:#F3EEDF;
+  --shadow:0 1px 2px rgba(50,55,35,.06), 0 10px 26px rgba(50,55,35,.08);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --paper:#17120B; --card:#211A10; --ink:#EFE7D5; --muted:#A6957A;
-    --line:#332818; --line-strong:#463818;
-    --sogan:#C8A06A; --gold:#CBA85A; --gold-soft:#DDBE76; --green:#8FB394;
-    --good:#8FB394; --warn:#D8A860;
-    --bar:#7C5E36; --bar-dip:#B98F52;
-    --rec-bg:#241A0E; --rec-ink:#EFE7D5;
+    --paper:#14160F; --card:#1D2016; --ink:#ECE7D6; --muted:#9D9880;
+    --line:#2C3122; --line-strong:#3C4330;
+    --sogan:#9DB488; --gold:#CBB277; --gold-soft:#DCC793; --green:#9DB488; --blush:#D8A79E;
+    --good:#9DB488; --warn:#D8A860;
+    --bar:#5E7048; --bar-dip:#B79A57;
+    --rec-bg:#1B2113; --rec-ink:#ECE7D6;
     --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 32px rgba(0,0,0,.3);
   }
 }
 :root[data-theme="dark"]{
-  --paper:#17120B; --card:#211A10; --ink:#EFE7D5; --muted:#A6957A;
-  --line:#332818; --line-strong:#463818;
-  --sogan:#C8A06A; --gold:#CBA85A; --gold-soft:#DDBE76; --green:#8FB394;
-  --good:#8FB394; --warn:#D8A860;
-  --bar:#7C5E36; --bar-dip:#B98F52;
-  --rec-bg:#241A0E; --rec-ink:#EFE7D5;
+  --paper:#14160F; --card:#1D2016; --ink:#ECE7D6; --muted:#9D9880;
+  --line:#2C3122; --line-strong:#3C4330;
+  --sogan:#9DB488; --gold:#CBB277; --gold-soft:#DCC793; --green:#9DB488; --blush:#D8A79E;
+  --good:#9DB488; --warn:#D8A860;
+  --bar:#5E7048; --bar-dip:#B79A57;
+  --rec-bg:#1B2113; --rec-ink:#ECE7D6;
   --shadow:0 1px 2px rgba(0,0,0,.35), 0 12px 32px rgba(0,0,0,.3);
 }
 
@@ -231,6 +231,18 @@ footer b{color:var(--ink); font-weight:600}
     <path d="M12 2 C4 8 4 16 12 22 C20 16 20 8 12 2Z" fill="#6E8A66"/>
     <path d="M12 3 L12 21" stroke="#566E4F" stroke-width="0.8"/>
   </symbol>
+  <symbol id="peony" viewBox="0 0 40 40">
+    <g fill="#DCA9A2" stroke="#C68B80" stroke-width="0.6">
+      <ellipse cx="20" cy="11" rx="6" ry="8"/>
+      <ellipse cx="20" cy="11" rx="6" ry="8" transform="rotate(60 20 20)"/>
+      <ellipse cx="20" cy="11" rx="6" ry="8" transform="rotate(120 20 20)"/>
+      <ellipse cx="20" cy="11" rx="6" ry="8" transform="rotate(180 20 20)"/>
+      <ellipse cx="20" cy="11" rx="6" ry="8" transform="rotate(240 20 20)"/>
+      <ellipse cx="20" cy="11" rx="6" ry="8" transform="rotate(300 20 20)"/>
+    </g>
+    <g fill="#E7BEB8"><circle cx="20" cy="16.5" r="4.4"/><circle cx="16" cy="21" r="3.8"/><circle cx="24" cy="21" r="3.8"/><circle cx="20" cy="22.5" r="4.2"/></g>
+    <circle cx="20" cy="20" r="2.3" fill="#CE958D"/>
+  </symbol>
 </svg>
 
 <div class="wrap">
@@ -250,21 +262,21 @@ footer b{color:var(--ink); font-weight:600}
     <!-- blossoms along the swag -->
     <use href="#melati" x="34"  y="8"  width="30" height="30"/>
     <use href="#melati" x="128" y="28" width="26" height="26"/>
-    <use href="#melati" x="222" y="46" width="28" height="28"/>
+    <use href="#peony"  x="220" y="44" width="30" height="30"/>
     <use href="#melati" x="330" y="60" width="26" height="26"/>
     <use href="#melati" x="436" y="66" width="30" height="30"/>
     <use href="#melati" x="548" y="60" width="26" height="26"/>
-    <use href="#melati" x="650" y="46" width="28" height="28"/>
+    <use href="#peony"  x="648" y="44" width="30" height="30"/>
     <use href="#melati" x="744" y="28" width="26" height="26"/>
     <use href="#melati" x="836" y="8"  width="30" height="30"/>
   </svg>
   <div class="eyebrow">
     <span>Engagement · Nov 2026</span><span class="dot"></span>
     <span>Wedding · 2027</span><span class="dot"></span>
-    <span>Melati &amp; Sogan</span>
+    <span>Melati · Kebaya · Garden</span>
   </div>
   <h1>A subtle wedding,<br><em>counted carefully.</em></h1>
-  <p class="lead">A Javanese bride, a Buginese groom, one shared account. White melati, sogan and gold — the adat kept light: a <span class="jv">siraman</span> before the day, then the akad and a subtle reception at Rooang Dharmawangsa with a proper flow. Here is the whole thing, and when it becomes affordable.</p>
+  <p class="lead">A Javanese bride, a Buginese groom, one shared account. Ivory lace, white melati and blush garden florals — the adat kept light: a <span class="jv">siraman</span> before the day, then the akad and a subtle reception at Rooang Dharmawangsa with a proper flow. Here is the whole thing, and when it becomes affordable.</p>
   <svg class="rings-motif" width="130" height="66" viewBox="0 0 130 66" fill="none" aria-hidden="true">
     <circle cx="52" cy="38" r="22" stroke="#A9822C" stroke-width="2.5"/>
     <circle cx="78" cy="38" r="22" stroke="#A9822C" stroke-width="2.5"/>
@@ -278,48 +290,33 @@ footer b{color:var(--ink); font-weight:600}
     <svg class="mk"><use href="#melati" width="22" height="22"/></svg>
     <span class="n" style="font-style:italic; text-transform:none; letter-spacing:0">Inspo</span>
     <h2>The look &amp; feel</h2>
-    <span class="sub">White melati, sogan &amp; gold — a Javanese home carried into the reception</span>
+    <span class="sub">Ivory lace, white melati &amp; garden greenery — soft, classic, Indonesian</span>
   </div>
-  <p class="lead2">The feeling we're planning toward: strings of white jasmine over warm teak, the deep brown-and-gold of sogan batik, brass and candlelight — the calm of a joglo home, dressed up for one evening at Rooang.</p>
+  <p class="lead2">Drawn from your wedspo board: an ivory lace kebaya with a roncean melati at the neckline, white calla and blush peonies, lush garden greenery over arches, woven rattan and candlelight — soft and classic, carried from a joglo home into one evening at Rooang.</p>
 
   <div class="palette">
     <div class="sw"><div class="chip" style="background:#FFFFFF"></div><div class="nm">Melati white</div><div class="ro">Jasmine — the flower</div></div>
-    <div class="sw"><div class="chip" style="background:#F2E9D5"></div><div class="nm">Ivory</div><div class="ro">Linen &amp; light</div></div>
-    <div class="sw"><div class="chip" style="background:#5E4123"></div><div class="nm">Sogan</div><div class="ro">Batik brown</div></div>
-    <div class="sw"><div class="chip" style="background:#B8912E"></div><div class="nm">Antique gold</div><div class="ro">Prada &amp; brass</div></div>
-    <div class="sw"><div class="chip" style="background:#4E6B4F"></div><div class="nm">Daun</div><div class="ro">Green accent</div></div>
+    <div class="sw"><div class="chip" style="background:#F2E9D5"></div><div class="nm">Ivory</div><div class="ro">Lace &amp; linen</div></div>
+    <div class="sw"><div class="chip" style="background:#5E7150"></div><div class="nm">Garden green</div><div class="ro">Foliage &amp; arches</div></div>
+    <div class="sw"><div class="chip" style="background:#DCA9A2"></div><div class="nm">Blush</div><div class="ro">Peony &amp; rose</div></div>
+    <div class="sw"><div class="chip" style="background:#C6B07A"></div><div class="nm">Champagne gold</div><div class="ro">Prada &amp; brass</div></div>
   </div>
 
   <div class="mtl">
     <div class="tile">
       <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs><linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7A5628"/><stop offset=".55" stop-color="#5E4123"/><stop offset="1" stop-color="#43301A"/></linearGradient></defs>
-        <rect width="120" height="92" fill="url(#wood)"/>
-        <g stroke="#3B2814" stroke-width="1" opacity=".4" fill="none"><path d="M0 22 Q60 28 120 20"/><path d="M0 46 Q60 52 120 44"/><path d="M0 70 Q60 76 120 68"/></g>
-        <g transform="translate(60,46)" fill="none" stroke="#C39A3B" stroke-width="1.2" opacity=".85"><circle r="13"/><circle r="6"/><path d="M0 -13 V-19 M0 13 V19 M-13 0 H-19 M13 0 H19"/></g>
+        <defs><pattern id="lace" width="20" height="20" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="#E1D5BC" stroke-width="1"><circle cx="10" cy="10" r="6.2"/><circle cx="0" cy="0" r="6.2"/><circle cx="20" cy="0" r="6.2"/><circle cx="0" cy="20" r="6.2"/><circle cx="20" cy="20" r="6.2"/></g>
+          <circle cx="10" cy="10" r="1.8" fill="#E1D5BC"/></pattern></defs>
+        <rect width="120" height="92" fill="#F4EDDC"/>
+        <rect width="120" height="92" fill="url(#lace)"/>
       </svg>
-      <div class="cap"><b>Teak &amp; carved wood</b><span>Warm, grounding</span></div>
+      <div class="cap"><b>Ivory lace</b><span>The kebaya</span></div>
     </div>
     <div class="tile">
       <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs><g id="tr" fill="#D8B25E"><circle r="1.7"/><path d="M0 -6 L1.2 -1.2 L6 0 L1.2 1.2 L0 6 L-1.2 1.2 L-6 0 L-1.2 -1.2Z"/></g>
-        <pattern id="trp" width="28" height="28" patternUnits="userSpaceOnUse"><use href="#tr" x="7" y="7"/><use href="#tr" x="21" y="21"/></pattern></defs>
-        <rect width="120" height="92" fill="#5E4123"/><rect width="120" height="92" fill="url(#trp)" opacity=".9"/>
-      </svg>
-      <div class="cap"><b>Batik truntum</b><span>Sogan — the love motif</span></div>
-    </div>
-    <div class="tile">
-      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <defs><pattern id="weave" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#CBAB6D"/><rect width="9" height="9" fill="#B4934F"/><rect x="9" y="9" width="9" height="9" fill="#B4934F"/></pattern></defs>
-        <rect width="120" height="92" fill="url(#weave)"/>
-        <g stroke="#8E7038" stroke-width=".7" opacity=".4"><path d="M0 9 H120 M0 27 H120 M0 45 H120 M0 63 H120 M0 81 H120"/></g>
-      </svg>
-      <div class="cap"><b>Woven bamboo</b><span>Gedhek texture</span></div>
-    </div>
-    <div class="tile">
-      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <rect width="120" height="92" fill="#F0E9D8"/>
-        <path d="M60 -4 V96" stroke="#C39A3B" stroke-width="1" opacity=".5"/>
+        <rect width="120" height="92" fill="#F0EEE2"/>
+        <path d="M60 -4 V96" stroke="#C6B07A" stroke-width="1" opacity=".5"/>
         <use href="#melati" x="47" y="4" width="26" height="26"/>
         <use href="#bud" x="55" y="30" width="10" height="13"/>
         <use href="#melati" x="49" y="42" width="22" height="22"/>
@@ -330,6 +327,39 @@ footer b{color:var(--ink); font-weight:600}
     </div>
     <div class="tile">
       <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="120" height="92" fill="#EFEEE4"/>
+        <g stroke="#6E8A66" stroke-width="2" fill="none"><path d="M60 92 C57 70 55 58 53 46"/><path d="M60 92 C64 72 67 60 71 48"/></g>
+        <path d="M44 44 C38 52 42 63 51 60 C58 58 58 45 51 41 C49 40 46 42 44 44Z" fill="#FFFFFF" stroke="#E2D6BE" stroke-width=".8"/>
+        <path d="M49 45 L51 61" stroke="#D9B24E" stroke-width="2"/>
+        <use href="#leaf" x="82" y="52" width="18" height="18"/>
+        <use href="#peony" x="56" y="30" width="32" height="32"/>
+        <use href="#peony" x="38" y="18" width="22" height="22"/>
+      </svg>
+      <div class="cap"><b>Calla &amp; peony</b><span>White &amp; blush bouquet</span></div>
+    </div>
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="120" height="92" fill="#E7EEE0"/>
+        <use href="#leaf" x="12" y="16" width="32" height="32"/>
+        <use href="#leaf" x="50" y="40" width="36" height="36"/>
+        <use href="#leaf" x="86" y="12" width="26" height="26"/>
+        <use href="#leaf" x="28" y="56" width="24" height="24"/>
+      </svg>
+      <div class="cap"><b>Garden greenery</b><span>Foliage &amp; arches</span></div>
+    </div>
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="120" height="92" fill="#E9DCBF"/>
+        <g transform="translate(60,80)">
+          <path d="M-40 0 A40 40 0 0 1 40 0 Z" fill="#DAC59C" stroke="#B89A5E" stroke-width="1"/>
+          <g stroke="#B89A5E" stroke-width="1"><path d="M0 0 V-40"/><path d="M0 0 L-20 -35"/><path d="M0 0 L20 -35"/><path d="M0 0 L-35 -20"/><path d="M0 0 L35 -20"/></g>
+          <circle r="3.2" fill="#B89A5E"/>
+        </g>
+      </svg>
+      <div class="cap"><b>Woven rattan fans</b><span>Kipas accents</span></div>
+    </div>
+    <div class="tile">
+      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <defs><radialGradient id="glow" cx=".5" cy=".46" r=".62"><stop offset="0" stop-color="#EBCB7B"/><stop offset=".5" stop-color="#8A6A2E"/><stop offset="1" stop-color="#38290F"/></radialGradient></defs>
         <rect width="120" height="92" fill="url(#glow)"/>
         <rect x="55" y="50" width="10" height="34" rx="1.5" fill="#EDE4CC"/>
@@ -337,16 +367,6 @@ footer b{color:var(--ink); font-weight:600}
         <path d="M60 32 C55 40 57 50 60 50 C63 50 65 40 60 32Z" fill="#F6D98A"/>
       </svg>
       <div class="cap"><b>Brass &amp; candlelight</b><span>Evening warmth</span></div>
-    </div>
-    <div class="tile">
-      <svg class="art" viewBox="0 0 120 92" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <rect width="120" height="92" fill="#E8EFE1"/>
-        <use href="#leaf" x="14" y="18" width="30" height="30"/>
-        <use href="#leaf" x="52" y="40" width="34" height="34"/>
-        <use href="#leaf" x="86" y="14" width="26" height="26"/>
-        <use href="#leaf" x="30" y="56" width="24" height="24"/>
-      </svg>
-      <div class="cap"><b>Palem &amp; daun</b><span>Tropical greenery</span></div>
     </div>
   </div>
 
@@ -378,8 +398,9 @@ footer b{color:var(--ink); font-weight:600}
         <path d="M44 92 Q74 112 104 92" fill="none" stroke="#C39A3B" stroke-width="1" opacity=".7"/>
         <path d="M122 92 Q152 112 182 92" fill="none" stroke="#C39A3B" stroke-width="1" opacity=".7"/>
         <path d="M200 92 Q230 112 260 92" fill="none" stroke="#C39A3B" stroke-width="1" opacity=".7"/>
-        <use href="#melati" x="66" y="99" width="16" height="16"/><use href="#melati" x="144" y="99" width="16" height="16"/><use href="#melati" x="222" y="99" width="16" height="16"/>
-        <use href="#bud" x="52" y="94" width="9" height="12"/><use href="#bud" x="96" y="94" width="9" height="12"/>
+        <use href="#peony" x="62" y="93" width="20" height="20"/><use href="#melati" x="144" y="99" width="16" height="16"/><use href="#peony" x="218" y="93" width="20" height="20"/>
+        <use href="#melati" x="98" y="99" width="14" height="14"/><use href="#melati" x="188" y="99" width="14" height="14"/>
+        <use href="#bud" x="52" y="94" width="9" height="12"/><use href="#bud" x="176" y="94" width="9" height="12"/>
         <g fill="#EBCB7B"><circle cx="90" cy="176" r="3"/><circle cx="150" cy="180" r="3"/><circle cx="210" cy="176" r="3"/></g>
         <g fill="#EBCB7B" opacity=".3"><circle cx="90" cy="176" r="7"/><circle cx="150" cy="180" r="7"/><circle cx="210" cy="176" r="7"/></g>
       </svg>
