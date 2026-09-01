@@ -68,8 +68,8 @@ for label,formula in kpi:
 ws["B13"]="Can we afford it, and when?"; ws["B13"].font=Font(name="Arial",size=12,bold=True,color="1F3864")
 header(ws,14,[2,3,4],{2:"Milestone",3:"Funds available",4:"Verdict"})
 snap=[("Engagement — Nov 2026","=Cashflow!C7+Cashflow!D7",'=IF(C15>='+E_PHASE+',"Funded ✓","Short")'),
-      ("Wedding Option A — Jul 2027","=Cashflow!F15",'=IF(C16>='+W_A+',"Funded ✓, surplus "&TEXT(C16-'+W_A+',"#,##0.0"),"Short by "&TEXT('+W_A+'-C16,"#,##0.0"))'),
-      ("Wedding Option A — Oct 2027","=Cashflow!F18",'=IF(C17>='+W_A+',"Funded ✓, surplus "&TEXT(C17-'+W_A+',"#,##0.0"),"Short by "&TEXT('+W_A+'-C17,"#,##0.0"))'),
+      ("Wedding Option A — Aug 2027","=Cashflow!F16",'=IF(C16>='+W_A+',"Funded ✓, surplus "&TEXT(C16-'+W_A+',"#,##0.0"),"Short by "&TEXT('+W_A+'-C16,"#,##0.0"))'),
+      ("Wedding Option A — Nov 2027","=Cashflow!F19",'=IF(C17>='+W_A+',"Funded ✓, surplus "&TEXT(C17-'+W_A+',"#,##0.0"),"Short by "&TEXT('+W_A+'-C17,"#,##0.0"))'),
       ("Wedding Option B — Dec 2027","=Cashflow!F20",'=IF(C18>='+W_B+',"Funded ✓","Short by "&TEXT('+W_B+'-C18,"#,##0.0")&" mio")')]
 rr=15
 for label,f_funds,f_verd in snap:
@@ -154,7 +154,7 @@ we.cell(14,4).fill=fill(GREENBG); we.cell(14,4).border=BORDER
 ww=wb.create_sheet("Wedding Budget"); ww.sheet_view.showGridLines=False
 for col,w in {"A":2,"B":30,"C":15,"D":15,"E":42}.items(): ww.column_dimensions[col].width=w
 ww["B2"]="Wedding Budget — Option A vs Option B"; ww["B2"].font=TITLE_F
-ww["B3"]="Subtle wedding at Rooang Dharmawangsa, full Javanese adat (bride is Javanese). A = intimate/lean · B = comfortable/grand. Figures in Rp mio."
+ww["B3"]="Subtle Javanese-adat wedding at Rooang. Pre-wed kept to the siraman; full reception day (MC, music, hotel). A = intimate/lean · B = grander. Rp mio."
 ww["B3"].font=SUB_F; ww.merge_cells("B3:E3")
 header(ww,5,[2,3,4,5],{2:"Key drivers",3:"Option A",4:"Option B",5:"Note"},bg=NAVY)
 drivers=[("Guest count (reception)",50,100,MIO0,"Subtle = small. Drives catering & souvenirs"),
@@ -168,24 +168,25 @@ for label,a,b,fmt,note in drivers:
     ww.cell(r,5,note).font=SMALL_IT; ww.cell(r,5).border=BORDER; ww.cell(r,5).alignment=LFT
     r+=1
 header(ww,10,[2,3,4,5],{2:"Line item",3:"Option A",4:"Option B",5:"What it covers"})
-items=[("Venue — Rooang Dharmawangsa","15","25","A: reception slot (akad at home). B: full akad + reception"),
+items=[("Siraman ceremony","3","5","Setaman flowers, seven-spring water, kendi, dawet, tumpeng, simple gendhing"),
+       ("Siraman family catering","1.5","3","Home meal for family on the siraman day"),
+       ("Venue — Rooang Dharmawangsa","15","25","A: reception (akad at home) · B: full akad + reception"),
+       ("Panggih (temu manten) props","2","3.5","Kembar mayang ×2, suruh, egg, kacar-kucur, sindur"),
+       ("Penghulu / KUA (akad)","0.6","0.6","Officiant outside office hours"),
+       ("Day-of coordinator (akad + reception)","3","5","Koordinator hari-H — runs the rundown, cues vendors"),
+       ("MC / host (akad + reception)","2.5","4","Bilingual host keeping the flow"),
        ("Reception catering","=C6*C7","=D6*D7","Guests × rate / guest"),
-       ("Siraman & midodareni catering","2.5","5","Family meals across the two adat days"),
-       ("Siraman ceremony","2.5","4","Setaman flowers, seven-spring water, kendi, dawet, tumpeng"),
-       ("Midodareni","1.5","3","Decor + ubarampe (offerings) for the seclusion night"),
-       ("Panggih props","2","3.5","Kembar mayang ×2, suruh, egg, kacar-kucur grains & coins, sindur"),
-       ("Tarub, janur & tuwuhan","1","2","Canopy + plants at the gate marking a wedding house"),
-       ("Pranatacara + gamelan","3","6","Javanese MC + gamelan (A: recorded · B: live ensemble)"),
+       ("Reception decor & floral — Rooang","5","12","Subtle & elegant: stage, entrance, aisle, table florals"),
+       ("Entertainment — live music","3.5","8","A: acoustic trio · B: full band"),
+       ("Hotel room — bridal suite (1 night)","2.5","5","Wedding-night room for the couple"),
+       ("Wedding cake & dessert","1","2.5","Cake + sweet corner"),
+       ("Souvenirs / favours","=C6*C8","=D6*D8","Guests × rate / guest"),
+       ("Photo & video (2-day)","6","12","Siraman day + wedding day"),
        ("Wedding rings (both)","="+A_WRINGS,"="+A_WRINGS,"Linked from Assumptions"),
-       ("Bride — paes MUA + adat busana","10","18","Paes ageng + basahan/kebaya across siraman, akad, panggih, resepsi"),
+       ("Bride — paes MUA + adat busana","10","18","Paes ageng across siraman, akad, reception"),
        ("Groom — adat busana","4","6","Beskap/basahan, blangkon, keris — loafers already bought"),
        ("Family adat attire","2","4","Coordinated kebaya/beskap for the parents"),
-       ("Decoration & floral (pelaminan)","6","14","Javanese stage + reception styling"),
-       ("Photo & video (2-day)","6","12","Siraman, midodareni, akad, panggih, resepsi"),
-       ("Penghulu / KUA (akad)","0.6","0.6","Officiant outside office hours"),
-       ("Invitations","0.3","1.5","A: digital only. B: digital + printed"),
-       ("Souvenirs / favours","=C6*C8","=D6*D8","Guests × rate / guest"),
-       ("Wedding cake & dessert","1","2.5","Cake + sweet corner"),
+       ("Invitations","0.3","1.5","A: digital · B: digital + printed"),
        ("Mahar (dowry)","1","3","Symbolic — set to your intention"),
        ("Transport & misc","2","3.5","Two-day logistics, cars, tips")]
 r=11; first=r
@@ -262,8 +263,8 @@ wt["B2"]="Timeline scenarios"; wt["B2"].font=TITLE_F
 wt["B3"]="Same savings plan, three wedding dates. 'Funds available' is that month's closing balance from Cashflow."
 wt["B3"].font=SUB_F; wt.merge_cells("B3:G3")
 header(wt,5,[2,3,4,5,6,7],{2:"Scenario",3:"Wedding",4:"Funds avail.",5:"Option A gap",6:"Option B gap",7:"Read"})
-scen=[("1 · Intimate & earliest","Jul 2027","=Cashflow!F15"),
-      ("2 · Comfortable cushion","Oct 2027","=Cashflow!F18"),
+scen=[("1 · Intimate & earliest","Aug 2027","=Cashflow!F16"),
+      ("2 · Comfortable cushion","Nov 2027","=Cashflow!F19"),
       ("3 · Full grandeur (Opt B)","Dec 2027","=Cashflow!F20")]
 r=6
 for name,when,funds in scen:
@@ -278,7 +279,7 @@ for name,when,funds in scen:
 wt.cell(11,2,"Gap = funds available − wedding grand total.  Positive = surplus, negative = shortfall.").font=SMALL_IT; wt.merge_cells("B11:G11")
 wt.cell(12,2,"Upside not modelled: angpau/gift money at the reception often offsets 30–50% of catering. Treat it as a cushion, not a plan.").font=SMALL_IT; wt.merge_cells("B12:G12")
 wt.cell(13,2,"Recommendation").font=BODY_B
-wt.cell(14,2,"Option A — full Javanese adat at an intimate scale — is funded with a cushion by autumn 2027. Option B (the grand adat) is a 2028 project, or needs a bigger monthly saving plus angpau.").font=BODY
+wt.cell(14,2,"Option A — siraman + a full reception day at an intimate scale — clears around August 2027 and sits on a cushion by Oct–Nov. Option B (grander, ~100 guests) is a 2028 project, or needs a bigger monthly saving plus angpau.").font=BODY
 wt.cell(14,2).alignment=LFT; wt.merge_cells("B14:G14"); wt.row_dimensions[14].height=32
 
 out="/Users/gomobile/Documents/Project/Wedding-Budget/Wedding_Budget.xlsx"

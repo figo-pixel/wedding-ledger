@@ -47,7 +47,6 @@ h1,h2,h3{font-family:"Fraunces",Georgia,serif; font-weight:500; text-wrap:balanc
 .rp{color:var(--muted); font-size:.72em; font-weight:500; letter-spacing:.02em}
 .jv{font-style:italic; color:var(--pine)}
 
-/* ---- masthead ---- */
 header.mast{border-bottom:1px solid var(--line); padding:64px 0 40px; position:relative}
 .mast .eyebrow{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
 .mast .dot{width:5px; height:5px; border-radius:50%; background:var(--brass); display:inline-block}
@@ -57,7 +56,6 @@ header.mast{border-bottom:1px solid var(--line); padding:64px 0 40px; position:r
 .rings{position:absolute; top:60px; right:0; opacity:.9}
 @media(max-width:640px){.rings{display:none}}
 
-/* ---- sections ---- */
 section{padding:56px 0; border-bottom:1px solid var(--line)}
 .sec-head{display:flex; align-items:baseline; gap:16px; margin-bottom:28px}
 .sec-head .n{font-family:"Fraunces",serif; font-size:15px; color:var(--brass); font-variant-numeric:tabular-nums; padding-top:4px}
@@ -72,7 +70,6 @@ section{padding:56px 0; border-bottom:1px solid var(--line)}
 .ledger .v small{font-size:14px; color:var(--muted); font-family:"Instrument Sans",sans-serif; font-weight:500}
 .ledger .note{font-size:12.5px; color:var(--muted); margin-top:4px}
 
-/* ---- tables ---- */
 table{width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums}
 .tbl-wrap{overflow-x:auto}
 th,td{text-align:right; padding:10px 14px; border-bottom:1px solid var(--line)}
@@ -89,7 +86,6 @@ tr.total td, .total td{border-top:1.5px solid var(--line-strong); border-bottom:
 .subtot td{color:var(--muted); font-size:14px}
 .subtot td:first-child{color:var(--muted)}
 
-/* option chips */
 .opts{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:22px}
 @media(max-width:560px){.opts{grid-template-columns:1fr}}
 .opt{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px}
@@ -99,7 +95,6 @@ tr.total td, .total td{border-top:1.5px solid var(--line-strong); border-bottom:
 .opt .big{font-family:"Fraunces",serif; font-size:34px; font-variant-numeric:tabular-nums; margin:6px 0 2px}
 .opt .desc{font-size:13.5px; color:var(--muted)}
 
-/* engagement breakdown */
 .engage-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:32px; align-items:start}
 @media(max-width:680px){.engage-grid{grid-template-columns:1fr; gap:8px}}
 .callout{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px; box-shadow:var(--shadow)}
@@ -111,7 +106,6 @@ tr.total td, .total td{border-top:1.5px solid var(--line-strong); border-bottom:
 .callout .row.grand .lab{font-weight:600}
 .callout .row.grand .amt{font-size:22px; color:var(--pine)}
 
-/* ---- adat sequence ---- */
 .seq-day{font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--brass); font-weight:600; margin:6px 0 4px}
 .seq{list-style:none; margin:0 0 8px; padding:0 0 0 26px; position:relative}
 .seq::before{content:""; position:absolute; left:6px; top:8px; bottom:12px; width:1.5px; background:var(--line-strong)}
@@ -123,8 +117,8 @@ tr.total td, .total td{border-top:1.5px solid var(--line-strong); border-bottom:
 .seq p{margin:3px 0 0; font-size:15px; color:var(--muted); max-width:64ch}
 .note-card{background:var(--card); border:1px solid var(--line); border-left:3px solid var(--brass); border-radius:10px; padding:14px 18px; margin-top:20px; font-size:14.5px; color:var(--muted)}
 .note-card b{color:var(--ink)}
+.note-card + .note-card{margin-top:12px}
 
-/* ---- runway chart ---- */
 .chart{position:relative; margin-top:10px; padding:28px 0 0}
 .plot{position:relative; height:250px; display:flex; align-items:flex-end; gap:2px; border-bottom:1.5px solid var(--line-strong)}
 .bar{flex:1; background:var(--bar); border-radius:3px 3px 0 0; min-width:0; position:relative; transition:height .8s cubic-bezier(.2,.7,.2,1)}
@@ -139,7 +133,6 @@ tr.total td, .total td{border-top:1.5px solid var(--line-strong); border-bottom:
 .legend{display:flex; gap:18px; flex-wrap:wrap; margin-top:14px; font-size:12.5px; color:var(--muted)}
 .legend b{display:inline-block; width:11px; height:11px; border-radius:3px; vertical-align:-1px; margin-right:6px}
 
-/* ---- scenarios ---- */
 .scenarios{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
 @media(max-width:760px){.scenarios{grid-template-columns:1fr}}
 .scn{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:2px}
@@ -152,7 +145,6 @@ tr.total td, .total td{border-top:1.5px solid var(--line-strong); border-bottom:
 .pill.part{background:color-mix(in srgb,var(--warn) 16%,transparent); color:var(--warn)}
 .pill .d{width:6px;height:6px;border-radius:50%;background:currentColor}
 
-/* ---- recommendation ---- */
 .rec{background:var(--pine); color:#F3F5EE; border-radius:16px; padding:38px 34px; box-shadow:var(--shadow)}
 :root[data-theme="dark"] .rec, :root:not([data-theme="light"]) .rec{color:#0F130F}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .rec{color:#F3F5EE}}
@@ -183,10 +175,10 @@ footer b{color:var(--ink); font-weight:600}
   <div class="eyebrow">
     <span>Engagement · Nov 2026</span><span class="dot"></span>
     <span>Wedding · 2027</span><span class="dot"></span>
-    <span>Adat Jawa</span>
+    <span>Adat: siraman kept</span>
   </div>
   <h1>A subtle wedding,<br><em>counted carefully.</em></h1>
-  <p class="lead">A Javanese bride, a Buginese groom, one shared account. The full adat is kept — <span class="jv">siraman</span>, <span class="jv">midodareni</span>, <span class="jv">panggih</span> and all — held at an intimate scale that fits inside what you already save. Here is the whole thing, and exactly when it becomes affordable.</p>
+  <p class="lead">A Javanese bride, a Buginese groom, one shared account. The adat is kept light — a <span class="jv">siraman</span> before the day, then the akad and a subtle reception at Rooang Dharmawangsa with a proper flow: MC, live music, and a night in the suite. Here is the whole thing, and when it becomes affordable.</p>
   <svg class="rings" width="120" height="90" viewBox="0 0 120 90" fill="none" aria-hidden="true">
     <circle cx="46" cy="52" r="26" stroke="var(--pine)" stroke-width="2.5"/>
     <circle cx="76" cy="52" r="26" stroke="var(--brass)" stroke-width="2.5"/>
@@ -206,8 +198,8 @@ footer b{color:var(--ink); font-weight:600}
     <div class="cell"><div class="k">In the account now</div><div class="v num">50<small> mio</small></div><div class="note">Blugether balance, Sep 2026</div></div>
     <div class="cell"><div class="k">Saved / month</div><div class="v num">5<small> mio</small></div><div class="note">Her 2 · His 3</div></div>
     <div class="cell"><div class="k">Engagement phase</div><div class="v num">17.8<small> mio</small></div><div class="note">Event 5.0 + ring 12.8</div></div>
-    <div class="cell"><div class="k">Wedding · Option A</div><div class="v num" style="color:var(--pine)">85.4<small> mio</small></div><div class="note">Intimate ~50, full adat</div></div>
-    <div class="cell"><div class="k">Wedding · Option B</div><div class="v num" style="color:var(--brass)">159.6<small> mio</small></div><div class="note">Grand adat, ~100</div></div>
+    <div class="cell"><div class="k">Wedding · Option A</div><div class="v num" style="color:var(--pine)">90.4<small> mio</small></div><div class="note">Intimate ~50, full day</div></div>
+    <div class="cell"><div class="k">Wedding · Option B</div><div class="v num" style="color:var(--brass)">168.4<small> mio</small></div><div class="note">Grander, ~100</div></div>
   </div>
 </section>
 
@@ -220,8 +212,8 @@ footer b{color:var(--ink); font-weight:600}
   </div>
   <div class="engage-grid">
     <div>
-      <p style="margin-top:0">You asked whether Rp&nbsp;5&nbsp;mio is enough for a small <span class="jv">lamaran</span> at home. It is — comfortably — as long as the meal stays home-cooked and the spend goes on what people see: a tent, some decoration, and the <span class="jv">seserahan</span> exchange.</p>
-      <p class="muted" style="font-size:15px">The engagement ring for her (Rp&nbsp;12.8&nbsp;mio) sits outside this — the same money, tracked on its own so the event budget stays honest. Together they make the <b style="color:var(--ink)">Rp&nbsp;17.8&nbsp;mio</b> engagement phase in November.</p>
+      <p style="margin-top:0">A small <span class="jv">lamaran</span> at home comes in comfortably at Rp&nbsp;5&nbsp;mio, as long as the meal stays home-cooked and the spend goes on what people see: a tent, some decoration, and the <span class="jv">seserahan</span> exchange.</p>
+      <p class="muted" style="font-size:15px">The engagement ring for her (Rp&nbsp;12.8&nbsp;mio) sits outside this — the same money, tracked on its own. Together they make the <b style="color:var(--ink)">Rp&nbsp;17.8&nbsp;mio</b> engagement phase in November.</p>
     </div>
     <div class="callout">
       <div class="row"><span class="lab">Tenda + chairs</span><span class="amt num">1.5</span></div>
@@ -235,27 +227,19 @@ footer b{color:var(--ink); font-weight:600}
   </div>
 </section>
 
-<!-- 3 · THE JAVANESE SEQUENCE -->
+<!-- 3 · THE SEQUENCE -->
 <section class="reveal">
   <div class="sec-head">
     <span class="n">03</span>
-    <h2>The Javanese sequence</h2>
-    <span class="sub">Two days of adat — this is what the wedding budget pays for</span>
+    <h2>The day, in order</h2>
+    <span class="sub">One adat ritual kept — the siraman — then a full wedding day</span>
   </div>
 
   <div class="seq-day">The day before</div>
   <ul class="seq">
-    <li>
-      <h3>Pasang Tarub &amp; Tuwuhan <span class="en">— raising the canopy</span></h3>
-      <p>Woven janur (young coconut leaf) and living plants go up at the gate. From here on, the house is a wedding house.</p>
-    </li>
     <li class="rite">
       <h3>Siraman <span class="en">— the bathing</span></h3>
-      <p>A purification with flower water drawn from seven sources, poured by the elders. It closes with <span class="jv">sungkeman</span> to the parents and the symbolic <span class="jv">dodol dawet</span> — the parents "selling" cendol to the guests.</p>
-    </li>
-    <li class="rite">
-      <h3>Midodareni <span class="en">— the seclusion night</span></h3>
-      <p>The bride keeps to her room through the evening while the groom's family calls. Tradition says the <span class="jv">widodari</span> — angels — descend that night to lend her their grace.</p>
+      <p>A purification at home with flower water drawn from seven sources, poured by the elders, to simple gendhing. It closes with <span class="jv">sungkeman</span> to the parents and the symbolic <span class="jv">dodol dawet</span>. This is the one pre-wedding adat we're keeping.</p>
     </li>
   </ul>
 
@@ -263,20 +247,23 @@ footer b{color:var(--ink); font-weight:600}
   <ul class="seq">
     <li>
       <h3>Ijab · Akad Nikah <span class="en">— the marriage contract</span></h3>
-      <p>The Islamic vows. Held at Rooang for Option B, or at home first then Rooang for Option A.</p>
+      <p>The Islamic vows. Held at Rooang for Option B, or at home first then Rooang for Option A. A day-of coordinator and MC keep the rundown on time.</p>
     </li>
     <li class="rite">
       <h3>Panggih <span class="en">— the meeting of the two</span></h3>
-      <p>Bride and groom meet for the first time as married: <span class="jv">balangan suruh</span> (betel toss), the egg, <span class="jv">sindur</span>, <span class="jv">kacar-kucur</span>, feeding one another, and a final <span class="jv">sungkeman</span>.</p>
+      <p>Bride and groom meet as married: <span class="jv">balangan suruh</span>, the egg, <span class="jv">sindur</span>, <span class="jv">kacar-kucur</span>, feeding one another, and a final <span class="jv">sungkeman</span>.</p>
     </li>
     <li>
       <h3>Resepsi <span class="en">— the reception</span></h3>
-      <p>The celebration at Rooang Dharmawangsa — the subtle gathering you're planning around.</p>
+      <p>At Rooang Dharmawangsa: subtle, elegant decor, seated catering, live music, and an MC to carry the evening — then a night in the bridal suite.</p>
     </li>
   </ul>
 
   <div class="note-card">
-    <b>A Bugis thread through a Javanese spine.</b> The adat here follows the bride's Javanese tradition end to end. The groom's Buginese side can be woven in gracefully — a Bugis accent in his attire, a family blessing, or a nod in the music — without adding a second full ceremony. A separate Bugis <b>ngunduh mantu</b> in Sulawesi is a bigger commitment and isn't costed here; say the word and I'll add it as an option.
+    <b>Kept deliberately light.</b> We've set aside the <span class="jv">midodareni</span> seclusion night and the <span class="jv">tarub</span> gate-canopy to keep the pre-wedding subtle — just the siraman remains. Say the word and either can come back as a costed add-on.
+  </div>
+  <div class="note-card">
+    <b>A Bugis thread through a Javanese spine.</b> The adat follows the bride's Javanese tradition. The groom's Buginese side can be woven in gracefully — a Bugis accent in his attire, a family blessing, a nod in the music. A separate Bugis <b>ngunduh mantu</b> in Sulawesi isn't costed here.
   </div>
 </section>
 
@@ -285,19 +272,19 @@ footer b{color:var(--ink); font-weight:600}
   <div class="sec-head">
     <span class="n">04</span>
     <h2>The wedding, two ways</h2>
-    <span class="sub">Full adat in both. A is lean; B is grand.</span>
+    <span class="sub">Same day, same rituals. A is lean; B is grander.</span>
   </div>
 
   <div class="opts">
     <div class="opt a">
       <div class="tag">Option A · Intimate</div>
-      <div class="big num">85.4 <span class="rp">Rp mio</span></div>
-      <div class="desc">~50 guests. <b>Akad at home</b>, reception at Rooang. Every ritual kept — recorded gamelan, rented busana, leaner styling.</div>
+      <div class="big num">90.4 <span class="rp">Rp mio</span></div>
+      <div class="desc">~50 guests. <b>Akad at home</b>, reception at Rooang. Acoustic trio, subtle decor, rented busana — the full flow, leaner.</div>
     </div>
     <div class="opt b">
-      <div class="tag">Option B · Grand</div>
-      <div class="big num">159.6 <span class="rp">Rp mio</span></div>
-      <div class="desc">~100 guests. <b>Full akad + reception</b> at Rooang. Live gamelan, paes ageng, fuller pelaminan, two-day full photo/video.</div>
+      <div class="tag">Option B · Grander</div>
+      <div class="big num">168.4 <span class="rp">Rp mio</span></div>
+      <div class="desc">~100 guests. <b>Full akad + reception</b> at Rooang. Live band, paes ageng, fuller decor, two-day full photo/video.</div>
     </div>
   </div>
 
@@ -307,37 +294,39 @@ footer b{color:var(--ink); font-weight:600}
       <tr><th>Line item</th><th>Option A</th><th>Option B</th></tr>
     </thead>
     <tbody>
-      <tr class="grp"><td colspan="3">Venue &amp; catering</td></tr>
-      <tr><td>Venue — Rooang Dharmawangsa<span class="d">A: reception slot · B: full akad + reception</span></td><td class="colA num">15.0</td><td class="colB num">25.0</td></tr>
+      <tr class="grp"><td colspan="3">Pre-wedding — Siraman</td></tr>
+      <tr><td>Siraman ceremony<span class="d">Setaman flowers, seven-spring water, kendi, dawet, tumpeng, gendhing</span></td><td class="colA num">3.0</td><td class="colB num">5.0</td></tr>
+      <tr><td>Siraman family catering<span class="d">Home meal for family on the day</span></td><td class="colA num">1.5</td><td class="colB num">3.0</td></tr>
+      <tr class="grp"><td colspan="3">Wedding day — akad &amp; flow</td></tr>
+      <tr><td>Venue — Rooang Dharmawangsa<span class="d">A: reception (akad at home) · B: full akad + reception</span></td><td class="colA num">15.0</td><td class="colB num">25.0</td></tr>
+      <tr><td>Panggih (temu manten) props<span class="d">Kembar mayang ×2, suruh, egg, kacar-kucur, sindur</span></td><td class="colA num">2.0</td><td class="colB num">3.5</td></tr>
+      <tr><td>Penghulu / KUA (akad)</td><td class="colA num">0.6</td><td class="colB num">0.6</td></tr>
+      <tr><td>Day-of coordinator<span class="d">Koordinator hari-H — runs the rundown, cues vendors</span></td><td class="colA num">3.0</td><td class="colB num">5.0</td></tr>
+      <tr><td>MC / host<span class="d">Bilingual host across akad + reception</span></td><td class="colA num">2.5</td><td class="colB num">4.0</td></tr>
+      <tr class="grp"><td colspan="3">Reception at Rooang</td></tr>
       <tr><td>Reception catering<span class="d">50 × 0.15 · 100 × 0.20 per guest</span></td><td class="colA num">7.5</td><td class="colB num">20.0</td></tr>
-      <tr><td>Siraman &amp; midodareni catering<span class="d">Family meals across the two adat days</span></td><td class="colA num">2.5</td><td class="colB num">5.0</td></tr>
-      <tr class="grp"><td colspan="3">Adat Jawa</td></tr>
-      <tr><td>Siraman ceremony<span class="d">Setaman flowers, seven-spring water, kendi, dawet, tumpeng</span></td><td class="colA num">2.5</td><td class="colB num">4.0</td></tr>
-      <tr><td>Midodareni<span class="d">Decor + ubarampe (offerings)</span></td><td class="colA num">1.5</td><td class="colB num">3.0</td></tr>
-      <tr><td>Panggih props<span class="d">Kembar mayang ×2, suruh, egg, kacar-kucur, sindur</span></td><td class="colA num">2.0</td><td class="colB num">3.5</td></tr>
-      <tr><td>Tarub, janur &amp; tuwuhan<span class="d">Canopy + plants at the gate</span></td><td class="colA num">1.0</td><td class="colB num">2.0</td></tr>
-      <tr><td>Pranatacara + gamelan<span class="d">A: recorded · B: live ensemble</span></td><td class="colA num">3.0</td><td class="colB num">6.0</td></tr>
+      <tr><td>Reception decor &amp; floral — Rooang<span class="d">Subtle &amp; elegant: stage, entrance, aisle, table florals</span></td><td class="colA num">5.0</td><td class="colB num">12.0</td></tr>
+      <tr><td>Entertainment — live music<span class="d">A: acoustic trio · B: full band</span></td><td class="colA num">3.5</td><td class="colB num">8.0</td></tr>
+      <tr><td>Hotel room — bridal suite (1 night)<span class="d">Wedding-night room for the couple</span></td><td class="colA num">2.5</td><td class="colB num">5.0</td></tr>
+      <tr><td>Wedding cake &amp; dessert</td><td class="colA num">1.0</td><td class="colB num">2.5</td></tr>
+      <tr><td>Souvenirs / favours</td><td class="colA num">0.8</td><td class="colB num">2.5</td></tr>
+      <tr><td>Photo &amp; video (2-day)<span class="d">Siraman day + wedding day</span></td><td class="colA num">6.0</td><td class="colB num">12.0</td></tr>
       <tr class="grp"><td colspan="3">Attire, beauty &amp; rings</td></tr>
       <tr><td>Wedding rings (both)</td><td class="colA num">9.0</td><td class="colB num">9.0</td></tr>
-      <tr><td>Bride — paes MUA + adat busana<span class="d">Paes ageng across siraman, akad, panggih, resepsi</span></td><td class="colA num">10.0</td><td class="colB num">18.0</td></tr>
+      <tr><td>Bride — paes MUA + adat busana<span class="d">Paes ageng across siraman, akad, reception</span></td><td class="colA num">10.0</td><td class="colB num">18.0</td></tr>
       <tr><td>Groom — adat busana<span class="d">Beskap/basahan, blangkon, keris — loafers already bought</span></td><td class="colA num">4.0</td><td class="colB num">6.0</td></tr>
       <tr><td>Family adat attire<span class="d">Coordinated kebaya/beskap for the parents</span></td><td class="colA num">2.0</td><td class="colB num">4.0</td></tr>
-      <tr class="grp"><td colspan="3">Styling, media &amp; the rest</td></tr>
-      <tr><td>Decoration &amp; floral (pelaminan)</td><td class="colA num">6.0</td><td class="colB num">14.0</td></tr>
-      <tr><td>Photo &amp; video (2-day)</td><td class="colA num">6.0</td><td class="colB num">12.0</td></tr>
-      <tr><td>Penghulu / KUA (akad)</td><td class="colA num">0.6</td><td class="colB num">0.6</td></tr>
+      <tr class="grp"><td colspan="3">Other</td></tr>
       <tr><td>Invitations<span class="d">A: digital · B: digital + printed</span></td><td class="colA num">0.3</td><td class="colB num">1.5</td></tr>
-      <tr><td>Souvenirs / favours</td><td class="colA num">0.8</td><td class="colB num">2.5</td></tr>
-      <tr><td>Wedding cake &amp; dessert</td><td class="colA num">1.0</td><td class="colB num">2.5</td></tr>
       <tr><td>Mahar (dowry)<span class="d">Symbolic — set to your intention</span></td><td class="colA num">1.0</td><td class="colB num">3.0</td></tr>
       <tr><td>Transport &amp; misc<span class="d">Two-day logistics, cars, tips</span></td><td class="colA num">2.0</td><td class="colB num">3.5</td></tr>
-      <tr class="subtot"><td>Subtotal</td><td class="num">77.7</td><td class="num">145.1</td></tr>
-      <tr class="subtot"><td>Contingency (10%)</td><td class="num">7.8</td><td class="num">14.5</td></tr>
-      <tr class="total"><td>Grand total <span class="rp">Rp mio</span></td><td class="colA num">85.4</td><td class="colB num">159.6</td></tr>
+      <tr class="subtot"><td>Subtotal</td><td class="num">82.2</td><td class="num">153.1</td></tr>
+      <tr class="subtot"><td>Contingency (10%)</td><td class="num">8.2</td><td class="num">15.3</td></tr>
+      <tr class="total"><td>Grand total <span class="rp">Rp mio</span></td><td class="colA num">90.4</td><td class="colB num">168.4</td></tr>
     </tbody>
   </table>
   </div>
-  <p class="muted" style="font-size:14.5px; margin-bottom:0">On your Rooang question: doing the <b style="color:var(--ink)">akad at Rooang</b> is the fuller Option&nbsp;B package. If the slot or rate makes that tight, the graceful fallback is <b style="color:var(--ink)">akad at home first, then the reception at Rooang</b> — that's Option&nbsp;A, and it keeps every ritual intact while saving roughly Rp&nbsp;74&nbsp;mio against B.</p>
+  <p class="muted" style="font-size:14.5px; margin-bottom:0">On your Rooang question: <b style="color:var(--ink)">akad at Rooang</b> is the fuller Option&nbsp;B. If the slot or rate is tight, <b style="color:var(--ink)">akad at home first, then reception at Rooang</b> is Option&nbsp;A — same flow, roughly Rp&nbsp;78&nbsp;mio lighter than B.</p>
 </section>
 
 <!-- 5 · RUNWAY -->
@@ -349,15 +338,15 @@ footer b{color:var(--ink); font-weight:600}
   </div>
   <div class="chart">
     <div class="plot" id="plot">
-      <div class="refline b" style="bottom:96.7%"><span class="rl brass">Option B · 159.6</span></div>
-      <div class="refline"  style="bottom:51.8%"><span class="rl pine">Option A · 85.4</span></div>
+      <div class="refline b" style="bottom:96.2%"><span class="rl brass">Option B · 168.4</span></div>
+      <div class="refline"  style="bottom:51.7%"><span class="rl pine">Option A · 90.4</span></div>
     </div>
     <div class="xaxis" id="xaxis"></div>
     <div class="legend">
       <span><b style="background:var(--bar)"></b>Monthly closing balance</span>
       <span><b style="background:var(--bar-dip)"></b>Engagement month (Nov 2026)</span>
     </div>
-    <p class="chart-cap">The account never drops below Rp&nbsp;47&nbsp;mio. <b style="color:var(--ink)">Option A is fully funded from around July 2027</b> and only grows from there. <b style="color:var(--ink)">Option B</b> reaches ~Rp&nbsp;112&nbsp;mio by December 2027 — still about Rp&nbsp;48&nbsp;mio short — so the grand version wants a 2028 date, a bigger monthly saving, or the angpau on the night.</p>
+    <p class="chart-cap">The account never drops below Rp&nbsp;47&nbsp;mio. <b style="color:var(--ink)">Option A is fully funded from around August 2027</b> and only grows after. <b style="color:var(--ink)">Option B</b> reaches ~Rp&nbsp;112&nbsp;mio by December 2027 — still ~Rp&nbsp;56&nbsp;mio short — so the grander version is a 2028 date, a bigger monthly saving, or the angpau on the night.</p>
   </div>
 </section>
 
@@ -371,24 +360,24 @@ footer b{color:var(--ink); font-weight:600}
   <div class="scenarios">
     <div class="scn">
       <div class="lbl">Scenario 1 · Earliest</div>
-      <div class="when">July 2027</div>
-      <div class="funds">Funds available <b>87.2</b> mio</div>
-      <div class="funds muted">Option A costs 85.4</div>
+      <div class="when">August 2027</div>
+      <div class="funds">Funds available <b>92.2</b> mio</div>
+      <div class="funds muted">Option A costs 90.4</div>
       <span class="pill ok"><span class="d"></span>A just funded (~2 mio)</span>
     </div>
     <div class="scn">
       <div class="lbl">Scenario 2 · Cushion</div>
-      <div class="when">October 2027</div>
-      <div class="funds">Funds available <b>102.2</b> mio</div>
-      <div class="funds muted">Option A costs 85.4</div>
+      <div class="when">November 2027</div>
+      <div class="funds">Funds available <b>107.2</b> mio</div>
+      <div class="funds muted">Option A costs 90.4</div>
       <span class="pill ok"><span class="d"></span>A funded · ~17 mio spare</span>
     </div>
     <div class="scn">
-      <div class="lbl">Scenario 3 · Full grandeur</div>
+      <div class="lbl">Scenario 3 · Grander</div>
       <div class="when">≈ 2028</div>
       <div class="funds">By Dec 2027: <b>112.2</b> mio</div>
-      <div class="funds muted">Option B costs 159.6</div>
-      <span class="pill part"><span class="d"></span>B short ~48 mio</span>
+      <div class="funds muted">Option B costs 168.4</div>
+      <span class="pill part"><span class="d"></span>B short ~56 mio</span>
     </div>
   </div>
 </section>
@@ -398,15 +387,15 @@ footer b{color:var(--ink); font-weight:600}
   <div class="rec">
     <div class="eyebrow">The honest read</div>
     <h2>Aim for Option A, autumn 2027.</h2>
-    <p>With the full Javanese adat kept — siraman, midodareni, panggih and all — an intimate scale still fits inside what you already save. You clear Option A around July 2027 and sit on a real cushion by September–October. No stretching, no borrowing.</p>
+    <p>The siraman, the akad, a subtle reception at Rooang with real flow — coordinator, MC, live music, a night in the suite — still fits inside what you already save. You clear Option A around August 2027 and sit on a cushion by October–November. No stretching, no borrowing.</p>
     <div class="grid">
       <div>
         <h3>If you want it sooner</h3>
-        <p>July 2027, Option A. Every ritual intact at a leaner scale — recorded gamelan, rented busana, ~50 of the people who matter. Just funded.</p>
+        <p>August 2027, Option A. The full day intact at a leaner scale — acoustic trio, subtle decor, ~50 of the people who matter. Just funded.</p>
       </div>
       <div>
-        <h3>If you want the grand adat</h3>
-        <p>Option B — live gamelan, paes ageng, ~100 guests — lands in 2028, or sooner if you lift the monthly saving. Angpau closes the last stretch.</p>
+        <h3>If you want it grander</h3>
+        <p>Option B — full band, paes ageng, ~100 guests — lands in 2028, or sooner if you lift the monthly saving. Angpau closes the last stretch.</p>
       </div>
     </div>
   </div>
@@ -415,7 +404,7 @@ footer b{color:var(--ink); font-weight:600}
 <footer>
   <b>How to read this</b> — All figures in Rp million. The full working model, with every line item as a live formula you can change, is in the companion Excel file (<b>Wedding_Budget.xlsx</b>).
   <div class="assume">
-    <div><b>Adat</b> full Javanese sequence, two-day event (bride Javanese, groom Buginese)</div>
+    <div><b>Adat</b> siraman kept; midodareni &amp; tarub set aside</div>
     <div><b>Balance</b> Rp 50 mio today (Sep 2026)</div>
     <div><b>Saving</b> Rp 5 mio/mo · her 2, his 3</div>
     <div><b>Engagement ring</b> Rp 12.8 mio · <b>wedding rings</b> Rp 9 mio</div>
@@ -427,14 +416,13 @@ footer b{color:var(--ink); font-weight:600}
 </div>
 
 <script>
-// runway data — monthly closing balance (Rp mio), Sep 2026 → Dec 2027
 const data=[
  {m:"Sep",y:"26",v:55.0},{m:"Oct",y:"26",v:60.0},{m:"Nov",y:"26",v:47.2,dip:true},{m:"Dec",y:"26",v:52.2},
  {m:"Jan",y:"27",v:57.2},{m:"Feb",y:"27",v:62.2},{m:"Mar",y:"27",v:67.2},{m:"Apr",y:"27",v:72.2},
  {m:"May",y:"27",v:77.2},{m:"Jun",y:"27",v:82.2},{m:"Jul",y:"27",v:87.2},{m:"Aug",y:"27",v:92.2},
  {m:"Sep",y:"27",v:97.2},{m:"Oct",y:"27",v:102.2},{m:"Nov",y:"27",v:107.2},{m:"Dec",y:"27",v:112.2}
 ];
-const SCALE=165, plot=document.getElementById("plot"), xaxis=document.getElementById("xaxis");
+const SCALE=175, plot=document.getElementById("plot"), xaxis=document.getElementById("xaxis");
 data.forEach((d,i)=>{
   const bar=document.createElement("div");
   bar.className="bar"+(d.dip?" dip":"");
@@ -446,8 +434,6 @@ data.forEach((d,i)=>{
   xaxis.appendChild(x);
   requestAnimationFrame(()=>setTimeout(()=>{bar.style.height=(d.v/SCALE*100).toFixed(1)+"%";}, 120+i*45));
 });
-
-// reveal on scroll
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 </script>
